@@ -1,0 +1,18 @@
+Demo Talebi → info@finhouse.ai mail akışı (Netlify)
+
+Önemli: Statik sitede (HTML) doğrudan SMTP ile mail gönderemezsiniz.
+Netlify Forms formu kaydeder; e-posta bildirimi Netlify panelinden açılır.
+
+1) Formun Netlify tarafından alındığını doğrula
+   - Netlify Dashboard → Site → Forms
+   - 'demo' formu görünmeli ve en az 1 submission olmalı.
+   - Görünmüyorsa: /demo.html gerçekten yayınlandı mı ve formda data-netlify="true" var mı kontrol edin.
+
+2) info@finhouse.ai’ye bildirim aç
+   - Forms → demo → Settings → Notifications
+   - Email notifications → Add notification
+   - Recipient: info@finhouse.ai
+
+3) Mail gelmiyorsa
+   - Spam/Junk kontrol
+   - DMARC/filtre kuralı olabilir. Test için geçici olarak bir Gmail adresine de notification ekleyin.

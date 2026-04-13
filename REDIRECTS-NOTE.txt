@@ -1,0 +1,8 @@
+Redirect loop hatası için düzeltme
+
+Netlify _redirects dosyası 'http://...' gibi şemalı kaynakları doğru eşleştirmeyebilir ve SSL/primary-domain ayarlarıyla birleşince loop yapabilir.
+Bu sürümde yönlendirmeler Netlify koşullarıyla yazıldı:
+- X-Forwarded-Proto=http → HTTPS'e zorlar
+- Host=www.finhouse.ai → finhouse.ai'ye zorlar
+
+Not: Netlify panelinde 'Primary domain' = finhouse.ai olmalı ve 'Force HTTPS' açık olmalı.

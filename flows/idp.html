@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>IDP & Doküman Zekâsı Akışı | FinHouse.ai</title>
+  
+<link rel="stylesheet" href="../styles.css?v=20260310-v62" />
+<style>
+  .flow-wrap{max-width:1120px;margin:0 auto;padding:28px 18px}
+  .flow-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .back{display:inline-flex;align-items:center;gap:8px}
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-top:14px}
+  .step{border:1px solid var(--color-border);background:var(--color-surface);border-radius:var(--radius);padding:16px}
+  .step b{display:block;margin-bottom:8px}
+  .step ul{margin:0;padding-left:18px;color:var(--color-muted);line-height:1.6;font-size:14px}
+  .diagram{margin-top:12px;border:1px solid var(--color-border);background:var(--color-surface);border-radius:var(--radius);padding:16px}
+  .lane{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+  .node{padding:10px 12px;border-radius:999px;border:1px solid var(--color-border);background:rgba(255,255,255,0.04);font-weight:700;font-size:13px;color:var(--color-text)}
+  body[data-theme="light"] .node{background:rgba(39,46,72,0.04)}
+  .arrow{opacity:.75}
+</style>
+
+</head>
+<body data-theme="dark">
+  <div class="flow-wrap">
+    <div class="flow-head">
+      <a class="pill back" href="../index.html#cozumler">← Geri</a>
+      <button id="themeToggle" class="pill" type="button"><span id="themeLabel">Koyu</span></button>
+    </div>
+
+    <h1 class="h-title" style="font-size:34px;margin-top:14px;">IDP & Doküman Zekâsı Akışı</h1>
+    <p class="h-sub">Fatura/sözleşme/talimat gibi dokümanlardan veri çıkarımı ve doğrulama ile uçtan uca otomasyon örneği.</p>
+
+    <div class="diagram">
+      <div class="lane">
+        <span class="node">Doküman girişi</span><span class="arrow">→</span><span class="node">Sınıflandırma</span><span class="arrow">→</span><span class="node">Alan çıkarımı</span><span class="arrow">→</span><span class="node">Doğrulama</span><span class="arrow">→</span><span class="node">Onay</span><span class="arrow">→</span>
+        <span class="node">ERP/Arşiv</span>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step"><b>1) Girdi & Ön İşleme</b><ul><li>E-posta/API/portal ile doküman alımı</li><li>Kalite kontrol, sayfa ayrıştırma</li><li>PII/maskeleme opsiyonu</li></ul></div><div class="step"><b>2) Çıkarım</b><ul><li>Doküman türü sınıflandırma</li><li>Alan çıkarımı: tutar, tarih, referans, vade</li><li>Güven skoru üretimi</li></ul></div><div class="step"><b>3) Doğrulama & Onay</b><ul><li>İş kuralları kontrolleri (format/limit)</li><li>Belirsizlikte insan onayı</li><li>Denetim izi & kanıt paketi</li></ul></div><div class="step"><b>4) Entegrasyon</b><ul><li>ERP/CRM kaydı açma</li><li>Arşive (KEP/EDMS) kaydetme</li><li>Raporlama: doğruluk, SLA, throughput</li></ul></div>
+    </div>
+
+    <footer class="footer" style="margin-top:26px;">
+      <div class="footer-row">
+        <div class="footer-brand">
+          <img id="footerLogo" class="footer-logo" src="../assets/logo-white.png.jpg" alt="FinHouse" />
+          <span>© <span id="y"></span> FinHouse.ai</span>
+        </div>
+        <div>info@finhouse.ai</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../app.js?v=20260310-v62"></script>
+</body>
+</html>

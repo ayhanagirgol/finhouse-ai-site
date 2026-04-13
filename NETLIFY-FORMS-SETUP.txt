@@ -1,0 +1,15 @@
+Netlify Forms – info@finhouse.ai'ye e‑posta bildirimini açma
+
+1) Site Netlify'ye deploy edildikten sonra, demo formuna 1 test gönderimi yapın.
+   (Form, ilk submitten sonra Netlify Forms altında görünür.)
+
+2) Netlify paneli:
+   Site -> Forms -> demo -> Settings -> Notifications
+
+3) "Email notifications" altında:
+   Add notification -> info@finhouse.ai
+
+Not:
+- “Web üzerinden Gönder” çalışır ama e‑posta gelmiyorsa genelde bildirim eklenmemiştir.
+- “E‑posta ile Gönder” (mailto) cihazda varsayılan mail app yoksa çalışmayabilir.
+- “Gmail ile Gönder” Gmail hesabına girişliyseniz genelde sorunsuz çalışır.

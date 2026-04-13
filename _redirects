@@ -1,0 +1,16 @@
+# Canonical host + HTTPS (only for finhouse.ai domains; avoids preview/netlify.app loops)
+# Force HTTPS on apex
+/* https://finhouse.ai/:splat 301! Host=finhouse.ai X-Forwarded-Proto=http
+
+# Force apex (remove www)
+/* https://finhouse.ai/:splat 301! Host=www.finhouse.ai
+
+# Convenience
+/demo /demo.html 301
+/ai-marketplace /ai-marketplace.html 301
+/finansal-yapay-zeka-cozumleri /finansal-yapay-zeka-cozumleri.html 301
+/bankacilik-yapay-zeka-cozumleri /bankacilik-yapay-zeka-cozumleri.html 301
+/odeme-kurulusu-ai-cozumleri /odeme-kurulusu-ai-cozumleri.html 301
+/idp-dokuman-zeka /idp-dokuman-zeka.html 301
+/voice-ai-contact-center /voice-ai-contact-center.html 301
+/workflow-analytics /workflow-analytics.html 301

@@ -1,0 +1,17 @@
+Demo e-postası kesin çalışsın – Netlify Function (Resend)
+
+Bu sürümde demo formu önce şuraya gönderir:
+  /.netlify/functions/demo-request
+
+Kurulum:
+1) Resend hesabı aç, API key üret.
+2) Netlify → Site settings → Environment variables:
+   - RESEND_API_KEY = <key>
+   - RESEND_FROM = "FinHouse.ai <no-reply@finhouse.ai>"  (Resend'de doğrulanmış sender olmalı)
+   - DEMO_TO = "info@finhouse.ai"  (opsiyonel)
+
+3) Deploy sonrası test:
+   - /demo.html → submit → /thanks.html
+   - Mail info@finhouse.ai inbox'a düşmeli.
+
+Not: Sender domain doğrulaması gerekebilir. Olmazsa RESEND_FROM'u doğrulanmış bir domainle değiştirin.
