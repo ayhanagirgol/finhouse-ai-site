@@ -94,7 +94,8 @@ body[data-theme="light"] .pill.primary{
   grid-template-columns: 1.1fr 0.9fr;
   gap:18px;
 }
-.hero-left{min-width:0}
+.hero-left{min-width:0; display:flex; flex-direction:column}
+.hero-left .panel{margin-top:auto !important}
 .hero-right{min-width:0}
 
 .hero-badge{
