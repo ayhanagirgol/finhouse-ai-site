@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinHouse.ai Tanitim Maili</title>
+  <style>
+    body { margin: 0; padding: 0; background: #f4f4f8; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .wrapper { max-width: 620px; margin: 20px auto; background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+
+    /* Header */
+    .mail-header { background: linear-gradient(135deg, #1a1a2e, #2d2d44); padding: 32px 36px; color: #fff; }
+    .mail-header .brand { font-size: 22px; font-weight: 800; color: #fff; }
+    .mail-header .tagline { font-size: 13px; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+    /* Body */
+    .mail-body { padding: 36px; }
+    .mail-body p { font-size: 14px; line-height: 1.8; color: #444; margin: 0 0 16px; }
+    .mail-body strong { color: #1a1a2e; }
+
+    .greeting { font-size: 15px; color: #1a1a2e; font-weight: 600; margin-bottom: 16px; }
+
+    /* Section headers */
+    .section-title { font-size: 16px; font-weight: 700; color: #6366F1; margin: 28px 0 12px; padding-bottom: 6px; border-bottom: 2px solid #f0f0ff; }
+
+    /* Product cards in email */
+    .product-row { display: flex; gap: 12px; margin: 16px 0; }
+    .product-card { flex: 1; padding: 20px; border-radius: 12px; border: 1px solid #e8e8f0; background: #fafaff; }
+    .product-card h4 { font-size: 14px; font-weight: 700; color: #6366F1; margin: 0 0 6px; }
+    .product-card p { font-size: 12px; color: #666; margin: 0 0 10px; line-height: 1.6; }
+    .product-card a { font-size: 12px; color: #6366F1; text-decoration: none; font-weight: 600; }
+
+    /* Solution list */
+    .solution-list { padding: 0; margin: 12px 0; list-style: none; }
+    .solution-list li { font-size: 13px; color: #444; padding: 6px 0 6px 20px; position: relative; border-bottom: 1px solid #f5f5f5; }
+    .solution-list li:last-child { border-bottom: none; }
+    .solution-list li::before { content: "→"; position: absolute; left: 0; color: #6366F1; font-weight: 700; }
+
+    /* CTA Button */
+    .cta-wrap { text-align: center; margin: 28px 0; }
+    .cta-btn { display: inline-block; padding: 14px 36px; border-radius: 999px; background: linear-gradient(135deg, #6366F1, #8B5CF6); color: #fff; text-decoration: none; font-weight: 700; font-size: 14px; }
+
+    /* Sectors */
+    .sector-row { display: flex; gap: 8px; margin: 12px 0; }
+    .sector-pill { flex: 1; text-align: center; padding: 10px; border-radius: 8px; background: #f8f7ff; font-size: 12px; font-weight: 600; color: #6366F1; }
+
+    /* Why us */
+    .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin: 12px 0; }
+    .why-item { padding: 12px; border-radius: 8px; background: #f8f7ff; }
+    .why-item strong { font-size: 12px; color: #6366F1; display: block; margin-bottom: 2px; }
+    .why-item span { font-size: 11px; color: #888; }
+
+    /* Footer */
+    .mail-footer { background: #f8f8fc; padding: 24px 36px; text-align: center; border-top: 1px solid #e8e8f0; }
+    .mail-footer p { font-size: 11px; color: #999; margin: 4px 0; }
+    .mail-footer a { color: #6366F1; text-decoration: none; }
+
+    .divider { height: 1px; background: #e8e8f0; margin: 20px 0; }
+
+    /* Signature */
+    .signature { margin-top: 24px; padding-top: 16px; border-top: 1px solid #e8e8f0; }
+    .signature p { font-size: 13px; margin: 2px 0; }
+    .signature .name { font-weight: 700; color: #1a1a2e; }
+    .signature .title-role { color: #888; font-size: 12px; }
+
+    @media (max-width: 600px) {
+      .product-row { flex-direction: column; }
+      .why-grid { grid-template-columns: 1fr; }
+      .sector-row { flex-wrap: wrap; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- EMAIL PREVIEW TEXT (invisible) -->
+<div style="display:none; max-height:0; overflow:hidden;">
+  FinHouse.ai — Finans sektorune ozel yapay zeka cozumleri, AIWATCH gorunurluk platformu ve PatronAI kurumsal isletim sistemi.
+</div>
+
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="mail-header">
+    <div class="brand">FinHouse.ai</div>
+    <div class="tagline">Finansal Yapay Zeka Cozumleri Evi</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="mail-body">
+
+    <p class="greeting">Sayin [Isim] Bey/Hanim,</p>
+
+    <p>
+      FinHouse.ai olarak, <strong>bankacilik, odeme kuruluslari ve sigorta sektorune</strong> ozel
+      yapay zeka cozumleri sunuyoruz. Regulasyon uyumlu, olculebilir is etkisi odakli yaklasimimizi
+      sizinle paylasmak istiyoruz.
+    </p>
+
+    <!-- ÇÖZÜMLER -->
+    <div class="section-title">Cozum Alanlarimiz</div>
+    <ul class="solution-list">
+      <li><strong>IDP & Dokuman Zekasi</strong> &mdash; Fatura, sozlesme, form siniflandirma ve alan cikarimi</li>
+      <li><strong>Voice AI & Contact Center</strong> &mdash; Cagri karsilama, agent assist, ozetleme</li>
+      <li><strong>Workflow & Analytics</strong> &mdash; Is akisi kesfi, darbogaz analizi, SLA takibi</li>
+      <li><strong>Agentic Otomasyon</strong> &mdash; Uctan uca surec otomasyonu, ERP/CRM entegrasyon</li>
+      <li><strong>AI Test & Dogruluk</strong> &mdash; Model dogrulugu, benchmark, drift tespiti</li>
+      <li><strong>Uyum & Denetim</strong> &mdash; KVKK, BDDK, kanit paketleri, audit trail</li>
+    </ul>
+
+    <!-- ÜRÜNLER -->
+    <div class="section-title">SaaS Urunlerimiz</div>
+
+    <div class="product-row">
+      <div class="product-card">
+        <h4>AIWATCH</h4>
+        <p>AI Gorunurluk Platformu &mdash; Markanizin ChatGPT, Claude, Gemini ve 5 diger AI motorundaki gorunurlugunu olcun. Halusinasyon tespiti, rakip analizi, GEO Index skorlama.</p>
+        <p style="font-size:11px; color:#888;">8 AI motoru &bull; 34 sektor &bull; 19K+ firma DB</p>
+        <a href="https://aiwatch.com.tr">aiwatch.com.tr &rarr;</a>
+      </div>
+      <div class="product-card">
+        <h4>PatronAI</h4>
+        <p>Kurumsal AI Yonetim Kurulu &mdash; 8 C-level AI danismani (CEO, CFO, CTO...), otonom ajanlar, Digital Twin kisisellestirme. KVKK uyumlu.</p>
+        <p style="font-size:11px; color:#888;">8 Persona &bull; Tier 4 Agentic &bull; 4 Paket</p>
+        <a href="https://app.finhouse.ai">app.finhouse.ai &rarr;</a>
+      </div>
+    </div>
+
+    <!-- SEKTÖRLER -->
+    <div class="section-title">Hedef Sektorler</div>
+    <div class="sector-row">
+      <div class="sector-pill">🏦 Bankacilik</div>
+      <div class="sector-pill">💳 Odeme & E-Para</div>
+      <div class="sector-pill">🛡️ Sigorta</div>
+    </div>
+
+    <!-- NEDEN BİZ -->
+    <div class="section-title">Neden FinHouse.ai?</div>
+    <div class="why-grid">
+      <div class="why-item">
+        <strong>Regulasyon Uyumlu</strong>
+        <span>KVKK, BDDK, SPK, MASAK</span>
+      </div>
+      <div class="why-item">
+        <strong>Olculebilir ROI</strong>
+        <span>KPI odakli somut deger</span>
+      </div>
+      <div class="why-item">
+        <strong>Hibrit Mimari</strong>
+        <span>On-prem + Cloud esnekligi</span>
+      </div>
+      <div class="why-item">
+        <strong>Denetlenebilir</strong>
+        <span>Audit trail, kanit paketleri</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <p>
+      Kurumunuzun mevcut surecleri ve onceliklerine gore size ozel bir <strong>cozum haritasi</strong>
+      ve <strong>demo</strong> sunmaktan memnuniyet duyariz. Uygun bir zaman diliminde
+      kisa bir gorusme planlamak ister misiniz?
+    </p>
+
+    <!-- CTA -->
+    <div class="cta-wrap">
+      <a class="cta-btn" href="https://finhouse.ai/demo.html">Demo Talep Et</a>
+    </div>
+
+    <p style="font-size:13px; color:#888; text-align:center;">
+      veya dogrudan <a href="mailto:info@finhouse.ai" style="color:#6366F1;">info@finhouse.ai</a> adresinden bize ulasin.
+    </p>
+
+    <!-- SIGNATURE -->
+    <div class="signature">
+      <p class="name">[Isim Soyisim]</p>
+      <p class="title-role">[Unvan]</p>
+      <p style="font-size:12px; color:#888;">
+        FinHouse.ai &mdash; Finansal Yapay Zeka Cozumleri Evi<br/>
+        info@finhouse.ai &bull; finhouse.ai
+      </p>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="mail-footer">
+    <p><a href="https://finhouse.ai">finhouse.ai</a> &bull; <a href="https://aiwatch.com.tr">aiwatch.com.tr</a> &bull; <a href="https://app.finhouse.ai">app.finhouse.ai</a></p>
+    <p>&copy; 2026 FinHouse.ai &mdash; Tum haklari saklidir.</p>
+    <p style="margin-top:8px;">Bu e-posta [Sirket] yetkililerine gonderilmistir. Alici degilseniz lutfen siliniz.</p>
+  </div>
+
+</div>
+
+</body>
+</html>

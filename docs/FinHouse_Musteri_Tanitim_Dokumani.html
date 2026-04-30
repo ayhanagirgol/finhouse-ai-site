@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FinHouse.ai — Kurumsal Tanıtım Dokümanı</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.7; background: #fff; }
+
+    .page { max-width: 800px; margin: 0 auto; padding: 60px 48px; }
+    .page-break { page-break-after: always; }
+
+    /* Header */
+    .header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 32px; border-bottom: 3px solid #6366F1; margin-bottom: 40px; }
+    .header-brand { font-size: 28px; font-weight: 800; color: #6366F1; }
+    .header-sub { font-size: 13px; color: #666; margin-top: 4px; }
+    .header-right { text-align: right; font-size: 12px; color: #888; }
+
+    /* Sections */
+    h1 { font-size: 32px; font-weight: 800; color: #1a1a2e; margin-bottom: 8px; }
+    h1 span { color: #6366F1; }
+    h2 { font-size: 22px; font-weight: 700; color: #6366F1; margin: 36px 0 16px; padding-bottom: 8px; border-bottom: 2px solid #e8e8f0; }
+    h3 { font-size: 17px; font-weight: 700; color: #1a1a2e; margin: 20px 0 8px; }
+    p { font-size: 14px; color: #444; margin-bottom: 12px; }
+    .subtitle { font-size: 16px; color: #666; margin-bottom: 32px; }
+
+    /* Cards */
+    .card-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+    .card { padding: 20px; border-radius: 12px; border: 1px solid #e8e8f0; background: #fafaff; }
+    .card h3 { margin-top: 0; font-size: 15px; color: #6366F1; }
+    .card p { font-size: 13px; margin-bottom: 0; }
+
+    .card-full { padding: 24px; border-radius: 12px; border: 1px solid #e8e8f0; background: linear-gradient(135deg, #f8f7ff, #f0f0ff); margin: 16px 0; }
+    .card-full h3 { color: #6366F1; margin-top: 0; }
+
+    /* Product highlight */
+    .product { padding: 28px; border-radius: 16px; border: 2px solid #6366F1; background: linear-gradient(135deg, #f8f7ff 0%, #fff 100%); margin: 20px 0; }
+    .product-badge { display: inline-block; padding: 4px 12px; border-radius: 999px; background: #6366F1; color: #fff; font-size: 11px; font-weight: 700; margin-bottom: 12px; }
+    .product h3 { font-size: 20px; color: #1a1a2e; margin-top: 0; }
+    .product p { font-size: 14px; }
+
+    /* Lists */
+    ul { padding-left: 20px; margin: 8px 0 16px; }
+    li { font-size: 13px; color: #444; margin-bottom: 6px; }
+    li strong { color: #1a1a2e; }
+
+    /* Tags */
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .tag { padding: 4px 10px; border-radius: 6px; background: #f0f0ff; color: #6366F1; font-size: 11px; font-weight: 600; }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 20px 0; }
+    .stat { text-align: center; padding: 16px; border-radius: 10px; background: #f8f7ff; }
+    .stat .num { font-size: 24px; font-weight: 800; color: #6366F1; }
+    .stat .label { font-size: 11px; color: #888; margin-top: 4px; }
+
+    /* Pricing */
+    .pricing { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 16px 0; }
+    .price-card { padding: 20px; border-radius: 12px; border: 1px solid #e8e8f0; text-align: center; }
+    .price-card.pop { border-color: #6366F1; background: #fafaff; }
+    .price-card h4 { font-size: 15px; margin-bottom: 4px; }
+    .price-card .price { font-size: 24px; font-weight: 800; color: #6366F1; }
+    .price-card .price small { font-size: 12px; font-weight: 400; color: #888; }
+    .price-card ul { text-align: left; padding-left: 16px; margin-top: 12px; }
+    .price-card li { font-size: 12px; }
+
+    /* Sectors */
+    .sector-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin: 16px 0; }
+    .sector { padding: 16px; border-radius: 10px; background: #f8f7ff; text-align: center; }
+    .sector .ico { font-size: 24px; margin-bottom: 6px; }
+    .sector h4 { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+    .sector p { font-size: 11px; margin-bottom: 0; }
+
+    /* CTA */
+    .cta-box { padding: 28px; border-radius: 16px; background: linear-gradient(135deg, #6366F1, #8B5CF6); color: #fff; text-align: center; margin: 32px 0; }
+    .cta-box h3 { color: #fff; font-size: 20px; margin-bottom: 8px; }
+    .cta-box p { color: rgba(255,255,255,0.85); font-size: 14px; }
+    .cta-box .links { margin-top: 16px; font-size: 13px; }
+    .cta-box a { color: #fff; text-decoration: underline; }
+
+    /* Footer */
+    .doc-footer { margin-top: 40px; padding-top: 20px; border-top: 2px solid #e8e8f0; text-align: center; font-size: 11px; color: #aaa; }
+
+    @media print {
+      .page { padding: 40px 36px; }
+      .product { border-width: 1px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="page">
+  <!-- HEADER -->
+  <div class="header">
+    <div>
+      <div class="header-brand">FinHouse.ai</div>
+      <div class="header-sub">Finansal Yapay Zeka Cozumleri Evi</div>
+    </div>
+    <div class="header-right">
+      Kurumsal Tanitim Dokumani<br/>
+      2026
+    </div>
+  </div>
+
+  <h1>Finans Sektorune Ozel<br/><span>Yapay Zeka Cozumleri</span></h1>
+  <p class="subtitle">FinHouse.ai; bankacilik, odeme kuruluslari ve sigorta sirketleri icin uctan uca yapay zeka cozumleri, danismanlik ve SaaS urunleri sunar. Regulasyon uyumlu, olculebilir is etkisi odakli yaklasim.</p>
+
+  <div class="tags">
+    <span class="tag">KVKK / Uyum Odakli</span>
+    <span class="tag">Audit-Ready Izlenebilirlik</span>
+    <span class="tag">Pilot &rarr; Yayginlastirma</span>
+    <span class="tag">On-Premise & Cloud</span>
+  </div>
+
+  <!-- ÇÖZÜMLER -->
+  <h2>Cozum Portfoyu</h2>
+
+  <div class="card-grid">
+    <div class="card">
+      <h3>IDP & Dokuman Zekasi</h3>
+      <p>Fatura, sozlesme, talimat ve formlarda siniflandirma, alan cikarimi ve is akisi otomasyonu. OCR + NLP + LLM mimarisi.</p>
+    </div>
+    <div class="card">
+      <h3>Voice AI & Contact Center</h3>
+      <p>Cagri karsilama, yonlendirme, bilgi toplama ve self-servis senaryolarinda otomasyon. Agent assist ve ozetleme.</p>
+    </div>
+    <div class="card">
+      <h3>Workflow & Analytics</h3>
+      <p>Is akisi kesfi, darbogaz analizi, SLA kacirma ve verimlilik firsatlarinin gorunur kilinmasi. KPI dashboard.</p>
+    </div>
+    <div class="card">
+      <h3>Agentic Is Akislari</h3>
+      <p>Onay, gorev atama, entegrasyon ve aksiyon cikarimi ile uctan uca surec otomasyonu. ERP/CRM entegrasyon.</p>
+    </div>
+    <div class="card">
+      <h3>AI Test & Dogruluk</h3>
+      <p>Model dogrulugu, regresyon testleri, benchmark ve uretim performans izleme yaklasimi. Drift tespiti.</p>
+    </div>
+    <div class="card">
+      <h3>Uyum & Denetim</h3>
+      <p>Denetim izleri, karar kayitlari, kanit paketleri ve raporlama ile regulasyona uygun isletim. KVKK, BDDK.</p>
+    </div>
+  </div>
+
+  <!-- ÜRÜNLER -->
+  <h2>SaaS Urunlerimiz</h2>
+
+  <!-- AIWATCH -->
+  <div class="product">
+    <div class="product-badge">SaaS Urun</div>
+    <h3>AIWATCH &mdash; AI Gorunurluk Platformu</h3>
+    <p>Markanizin ChatGPT, Claude, Gemini, Perplexity, Copilot, DeepSeek, Meta AI ve Grok'taki gorunurlugunu olcun, halusinasyonlari tespit edin, rakiplerinizi gecin.</p>
+
+    <div class="stats">
+      <div class="stat"><div class="num">8</div><div class="label">AI Motoru</div></div>
+      <div class="stat"><div class="num">34</div><div class="label">Sektor</div></div>
+      <div class="stat"><div class="num">19K+</div><div class="label">Firma DB</div></div>
+      <div class="stat"><div class="num">14</div><div class="label">Gun Ucretsiz</div></div>
+    </div>
+
+    <h3>Temel Ozellikler</h3>
+    <ul>
+      <li><strong>GEO Index Skorlama:</strong> Gorunurluk (%40) + pozisyon (%35) + duygu (%25) bilesik skor</li>
+      <li><strong>Halusinasyon Tespiti:</strong> AI'nin markaniz hakkinda urettigi yanlis bilgileri otomatik yakalar</li>
+      <li><strong>Web Itibar Analizi:</strong> Sikayetvar, Eksisozluk, Wikipedia ve haber sitelerinde tarama</li>
+      <li><strong>Rakip Analizi:</strong> 20+ rakiple karsilastirma, Share of Voice ve otomatik alert</li>
+      <li><strong>Icerik Studyosu:</strong> Schema.org, SSS ve AI-ready web icerik uretimi</li>
+      <li><strong>Custom GPT Olusturucu:</strong> Sirkete ozel ChatGPT asistani olusturma</li>
+      <li><strong>Kisisel Marka Destegi:</strong> Influencer, YouTuber, sanatci, sporcu icin ozel mod</li>
+    </ul>
+
+    <h3>Fiyatlandirma</h3>
+    <div class="pricing">
+      <div class="price-card">
+        <h4>Kesfet</h4>
+        <div class="price">$9<small>/ay (yillik)</small></div>
+        <ul>
+          <li>1 marka takibi</li>
+          <li>5 rakip</li>
+          <li>4 AI motoru</li>
+          <li>Haftalik tarama</li>
+        </ul>
+      </div>
+      <div class="price-card pop">
+        <h4>Profesyonel</h4>
+        <div class="price">$29<small>/ay (yillik)</small></div>
+        <ul>
+          <li>3 marka takibi</li>
+          <li>15 rakip</li>
+          <li>4 AI + Brave Search</li>
+          <li>Gunluk tarama</li>
+          <li>Custom GPT</li>
+        </ul>
+      </div>
+      <div class="price-card">
+        <h4>Kurumsal</h4>
+        <div class="price">$49<small>/ay (yillik)</small></div>
+        <ul>
+          <li>Sinirsiz marka</li>
+          <li>API erisimi</li>
+          <li>White-label</li>
+          <li>Danismanlik</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font-size:12px; color:#888; text-align:center;">aiwatch.com.tr &bull; 14 gun ucretsiz deneme &bull; Kredi karti gerekmez</p>
+  </div>
+
+  <!-- PATRONAI -->
+  <div class="product">
+    <div class="product-badge">SaaS Urun &bull; Tier 4 Agentic</div>
+    <h3>PatronAI &mdash; Kurumsal AI Yonetim Kurulu</h3>
+    <p>CEO/CFO/CTO persona'larindan olusan 8 C-level AI danismani, Claude Code mimarisiyle otonom ajanlar (ReAct tool-use), Digital Twin kisisellestirme. KVKK uyumlu, on-premise veya cloud.</p>
+
+    <h3>Temel Ozellikler</h3>
+    <ul>
+      <li><strong>8 C-Level Persona:</strong> CEO, CFO, CTO, COO, CMO, CPO, CHRO, CRO &mdash; her soru kendi uzmanlik alanindan cevaplanir</li>
+      <li><strong>Agentic Ajanlar:</strong> Claude'un native tool-use API'si ile otonom calisir, her adim audit edilebilir</li>
+      <li><strong>Digital Twin:</strong> Mail yazim stilinizi, tercihlerinizi, LinkedIn profilinizi ogrenir</li>
+      <li><strong>Feature Flag Sistemi:</strong> 3 eksen (modul + davranis + compliance) &mdash; kuruma ozel paket</li>
+      <li><strong>Otomasyon Talep:</strong> AI ile fiyat onerisi, 72 saat icinde teslimat, basarisizlikta tam iade</li>
+      <li><strong>Cost Guardrails:</strong> Prompt caching ile %70 maliyet tasarrufu, tenant bazli budget cap</li>
+    </ul>
+
+    <div class="tags">
+      <span class="tag">Starter</span>
+      <span class="tag">Business</span>
+      <span class="tag">Enterprise</span>
+      <span class="tag">Executive</span>
+    </div>
+    <p style="font-size:12px; color:#888;">app.finhouse.ai &bull; 4 paket secenegi &bull; On-premise & Cloud</p>
+  </div>
+
+  <!-- SEKTÖRLER -->
+  <h2>Hedef Sektorler</h2>
+
+  <div class="sector-grid">
+    <div class="sector">
+      <div class="ico">🏦</div>
+      <h4>Bankacilik</h4>
+      <p>Musteri basvurulari, kredi evraklari, operasyon otomasyonu, surec analitigi</p>
+    </div>
+    <div class="sector">
+      <div class="ico">💳</div>
+      <h4>Odeme & E-Para</h4>
+      <p>Merchant onboarding, risk/uyum kontrolleri, dokuman yonetimi, SLA takibi</p>
+    </div>
+    <div class="sector">
+      <div class="ico">🛡️</div>
+      <h4>Sigorta</h4>
+      <p>Hasar surecleri, cagri karsilama, dokuman yogun operasyonlar</p>
+    </div>
+  </div>
+
+  <div class="card-full">
+    <h3>Neden FinHouse.ai?</h3>
+    <ul>
+      <li><strong>Regulasyon odakli:</strong> KVKK, BDDK, SPK, MASAK uyumlu mimari ve isletim modeli</li>
+      <li><strong>Olculebilir deger:</strong> Dogruluk, hiz, uyum ve surdurulebilirlik KPI'lari ile somut ROI</li>
+      <li><strong>Uctan uca teslimat:</strong> Danismanlik + uygulama + isletim &mdash; pilot'tan yaklasima</li>
+      <li><strong>Hibrit mimari:</strong> On-premise, cloud veya hibrit &mdash; hassas veriler lokal, genel AI bulut</li>
+      <li><strong>Denetlenebilirlik:</strong> Audit trail, kanit paketleri, karar kayitlari ve raporlama</li>
+    </ul>
+  </div>
+
+  <!-- ÇALIŞMA YAKLAŞIMI -->
+  <h2>Calisma Yaklasimi</h2>
+  <div class="card-grid">
+    <div class="card">
+      <h3>1. Kesfet</h3>
+      <p>Kapsam ve hedef dogrulama. Mevcut sistemler, veri kaynaklari ve onceliklerin belirlenmesi.</p>
+    </div>
+    <div class="card">
+      <h3>2. Tasarla</h3>
+      <p>Mimari, guvenlik, uyum ve entegrasyon plani. KPI seti ve basari kriterleri.</p>
+    </div>
+    <div class="card">
+      <h3>3. Pilot</h3>
+      <p>Sinirli kapsamda uygulama, test ve dogrulama. Gercek veri ile performans olcumu.</p>
+    </div>
+    <div class="card">
+      <h3>4. Yayginlastir</h3>
+      <p>Uretim ortamina gecis, izleme, optimizasyon ve surdurulebilir isletim modeli.</p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-box">
+    <h3>Demo & Iletisim</h3>
+    <p>Kurum, use case ve mevcut sistemlerinizle ilgili kisa bilgi paylasin; size net bir yol haritasi ve sonraki adimi iletelim.</p>
+    <div class="links">
+      <strong>E-posta:</strong> info@finhouse.ai<br/>
+      <strong>Web:</strong> <a href="https://finhouse.ai">finhouse.ai</a> &bull;
+      <strong>AIWATCH:</strong> <a href="https://aiwatch.com.tr">aiwatch.com.tr</a> &bull;
+      <strong>PatronAI:</strong> <a href="https://app.finhouse.ai">app.finhouse.ai</a>
+    </div>
+  </div>
+
+  <div class="doc-footer">
+    &copy; 2026 FinHouse.ai &mdash; Finansal Yapay Zeka Cozumleri Evi<br/>
+    Bu dokuman FinHouse.ai tarafindan hazirlanmistir. Icerigi gizli bilgi icerebilir.
+  </div>
+</div>
+
+</body>
+</html>
