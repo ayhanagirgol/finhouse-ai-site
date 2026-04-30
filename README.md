@@ -1,4 +1,4 @@
-# FinHouse.ai mini site (v3 - partner ikonları + sektör görselleri)
+# FinHouse.ai mini site (v3 - sektör görselleri)
 
 ## Çalıştırma
 ZIP'i açın, klasör içine girin.
