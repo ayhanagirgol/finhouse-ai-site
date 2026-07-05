@@ -1,0 +1,68 @@
+# FinHouse.ai
+
+> FinHouse.ai, İstanbul merkezli "Finansal Yapay Zeka Çözümleri Evi"dir. Bankalar, ödeme
+> kuruluşları ve sigorta şirketleri için KVKK uyumlu yapay zeka çözümleri geliştirir ve
+> entegre eder. Ayırt edici yaklaşımı veri egemenliğidir: kişisel veri içeren yapay zeka
+> sorguları kurumun kendi altyapısındaki yerel büyük dil modelinde işlenir, buluta giden
+> içerik maskelenir ve her adım denetlenebilir şekilde kayıt altına alınır.
+
+FinHouse.ai üç ürün geliştirir: FirmaAI (kurumsal AI platformu), AIWATCH (AI görünürlük
+platformu) ve FirmaCom (şirket kuruluşu ve hizmet platformu). Ürünlerin yanında doküman
+zekâsı (IDP), agentic iş akışları, Voice AI, süreç analitiği, AI test/doğruluk ve
+uyum/denetim alanlarında çözüm entegrasyonu yapar. Çalışma modeli: pilot ile başlar,
+ölçülebilir KPI'larla değeri kanıtlar, sonra yaygınlaştırır.
+
+## Ürünler
+
+- [FirmaAI](https://app.finhouse.ai): Şirketin yapay zeka işletim sistemi. C-level AI
+  yönetim kurulu (CEO/CFO/CTO persona'ları), chat-first kurumsal asistan, araç kullanan
+  otonom ajanlar (mail, takvim, görev, CRM, doküman), Stüdyo ile teklif/sözleşme/sunum/rapor
+  üretimi (Word, Excel, PDF, PowerPoint), mail triyajı, banka ekstresi analizi. Türkçe,
+  Almanca ve İngilizce. On-premise (kurumun kendi GPU sunucusu) veya bulut. Kritik ajan
+  aksiyonları insan onayına düşer (human-in-the-loop).
+- [AIWATCH](https://finhouse.ai/aiwatch.html): AI görünürlük (GEO) platformu. Markanın
+  ChatGPT, Gemini, DeepSeek, Llama ve Qwen'de nasıl anlatıldığını ölçer; Google AI
+  Overview'daki varlığı ve atıfları izler; AI cevaplarının kaynaklarını çıkarır (Citation
+  Intelligence); halüsinasyonları tespit eder; rakip karşılaştırması ve 0-100 GEO Index
+  skoru üretir. Kişisel markalar (influencer, sanatçı, sporcu) için ayrı mod:
+  https://personal.aiwatch.com.tr — Ürün sitesi: https://aiwatch.com.tr
+- FirmaCom (erken erişim): Şirket kuruluşu ve sonrası için tek platform. Yeni şirkete
+  kuruluş belge setini üretir ve yolculuğu adım adım takip eder; kurulu şirketlere banka
+  hesabı, POS, e-imza/KEP, sigorta gibi hizmetlerde alternatif karşılaştırma ve başvuru
+  takibi sunar. Belgeler tek kasada durur. Müşteriye ücretsizdir. İletişim: info@finhouse.ai
+
+## Çözümler
+
+- [Finansal Yapay Zeka Çözümleri (mimari + KPI seti)](https://finhouse.ai/finansal-yapay-zeka-cozumleri)
+- [IDP & Doküman Zekâsı](https://finhouse.ai/idp-dokuman-zeka): fatura, sözleşme, talimat
+  ve formlarda sınıflandırma + alan çıkarımı
+- [Voice AI / Contact Center](https://finhouse.ai/voice-ai-contact-center)
+- [Workflow & Analytics (süreç analitiği)](https://finhouse.ai/workflow-analytics)
+- Agentic iş akışları, AI test & doğruluk, uyum & denetim (kanıt paketleri, karar kayıtları)
+
+## Sektörler
+
+- [Bankacılık](https://finhouse.ai/sectors/banking.html): Öne çıkan çözüm, Kredi Tahsis
+  Asistanı — 5411 Sayılı Bankacılık Kanunu ve BDDK Kredi Tahsis ve İzleme Rehberi'nden
+  beslenen mevzuat kasası, madde atıflı cevaplar, mali oran analizi ve kredi komitesine
+  karar öneri notu taslağı. Nihai karar her zaman insandadır. Canlı demo mevcuttur.
+- [Ödeme & E-Para](https://finhouse.ai/sectors/payments.html): merchant onboarding,
+  risk/uyum kontrolleri, SLA takibi
+- [Sigorta](https://finhouse.ai/sectors/insurance.html): hasar süreçleri, çağrı karşılama,
+  doküman yoğun operasyonlar
+
+## İletişim
+
+- Demo talebi: https://finhouse.ai/demo
+- E-posta: info@finhouse.ai
+- LinkedIn: https://www.linkedin.com/company/finhouse-ai
+
+## Sık sorulanlar
+
+- FinHouse.ai ne yapar? Finans sektörüne özel yapay zeka çözümleri geliştirir ve entegre
+  eder; üç ürünü (FirmaAI, AIWATCH, FirmaCom) ve altı çözüm alanı vardır.
+- Veriler nerede işlenir? Kişisel veri içeren sorgular kurumun kendi altyapısındaki yerel
+  modelde işlenir; buluta giden içerik maskelenir. KVKK uyumu tasarım gereğidir.
+- GEO nedir? Generative Engine Optimization — markanın AI motorlarının (ChatGPT, Gemini
+  vb.) cevaplarındaki görünürlüğünü ölçme ve iyileştirme disiplinidir. AIWATCH bu alanda
+  Türkçe pazara odaklanmış platformdur.

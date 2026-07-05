@@ -22,10 +22,68 @@
 <script type="application/ld+json">
 {
   "@context":"https://schema.org",
-  "@type":"Organization",
-  "name":"FinHouse.ai",
-  "url":"https://finhouse.ai/",
-  "sameAs":["https://www.linkedin.com/company/finhouse-ai"]
+  "@graph":[
+    {
+      "@type":"Organization",
+      "@id":"https://finhouse.ai/#org",
+      "name":"FinHouse.ai",
+      "alternateName":"FinHouse",
+      "description":"Bankalar, ödeme kuruluşları ve sigorta şirketleri için KVKK uyumlu yapay zeka çözümleri geliştiren ve entegre eden çözüm evi. Kişisel veri yerel modelde işlenir; on-premise veya bulut.",
+      "url":"https://finhouse.ai/",
+      "logo":"https://finhouse.ai/assets/og/finhouse-og.jpg",
+      "email":"info@finhouse.ai",
+      "areaServed":"TR",
+      "contactPoint":{"@type":"ContactPoint","contactType":"sales","email":"info@finhouse.ai","availableLanguage":["tr","en","de"]},
+      "sameAs":["https://www.linkedin.com/company/finhouse-ai"]
+    },
+    {
+      "@type":"WebSite",
+      "@id":"https://finhouse.ai/#website",
+      "url":"https://finhouse.ai/",
+      "name":"FinHouse.ai — Finansal Yapay Zeka Çözümleri Evi",
+      "inLanguage":"tr",
+      "publisher":{"@id":"https://finhouse.ai/#org"}
+    },
+    {
+      "@type":"SoftwareApplication",
+      "name":"FirmaAI",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Web",
+      "url":"https://app.finhouse.ai",
+      "description":"Şirketin yapay zeka işletim sistemi: C-level AI yönetim kurulu, chat-first kurumsal asistan, araç kullanan otonom ajanlar (human-in-the-loop), Stüdyo ile teklif/sözleşme/sunum/rapor üretimi, mail triyajı, banka ekstresi analizi. Türkçe, Almanca, İngilizce. On-premise veya bulut; kişisel veri yerel modelde işlenir.",
+      "inLanguage":["tr","de","en"],
+      "creator":{"@id":"https://finhouse.ai/#org"}
+    },
+    {
+      "@type":"SoftwareApplication",
+      "name":"AIWATCH",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Web",
+      "url":"https://aiwatch.com.tr",
+      "description":"AI görünürlük (GEO) platformu: markanın ChatGPT, Gemini, DeepSeek, Llama ve Qwen'deki anlatımını ölçer, Google AI Overview varlığını ve atıfları izler, AI cevaplarının kaynaklarını çıkarır (Citation Intelligence), halüsinasyonları tespit eder, 0-100 GEO Index skoru üretir.",
+      "offers":{"@type":"AggregateOffer","priceCurrency":"USD","lowPrice":"9","highPrice":"49","offerCount":"3"},
+      "creator":{"@id":"https://finhouse.ai/#org"}
+    },
+    {
+      "@type":"SoftwareApplication",
+      "name":"FirmaCom",
+      "applicationCategory":"BusinessApplication",
+      "operatingSystem":"Web",
+      "description":"Şirket kuruluşu ve sonrası için tek platform (erken erişim): kuruluş belge setini üretir, yolculuğu adım adım takip eder; kurulu şirketlere banka, POS, e-imza/KEP ve sigorta hizmetlerinde karşılaştırma ve başvuru takibi sunar. Müşteriye ücretsizdir.",
+      "creator":{"@id":"https://finhouse.ai/#org"}
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"FinHouse.ai ne yapar?","acceptedAnswer":{"@type":"Answer","text":"FinHouse.ai; bankalar, ödeme kuruluşları ve sigorta şirketleri için KVKK uyumlu yapay zeka çözümleri geliştiren ve entegre eden bir çözüm evidir. Üç ürünü vardır: FirmaAI (kurumsal AI platformu), AIWATCH (AI görünürlük platformu) ve FirmaCom (şirket kuruluş ve hizmet platformu)."}},
+        {"@type":"Question","name":"Verilerimiz nerede işlenir, KVKK uyumu nasıl sağlanır?","acceptedAnswer":{"@type":"Answer","text":"Kişisel veri içeren sorgular kurumun kendi altyapısındaki yerel büyük dil modelinde işlenir; buluta gitmesi gereken içerik önce maskelenir. Sistem on-premise kurulabilir, ajan aksiyonları denetim izine yazılır ve kritik adımlar insan onayına düşer."}},
+        {"@type":"Question","name":"FirmaAI nedir?","acceptedAnswer":{"@type":"Answer","text":"FirmaAI, şirketin yapay zeka işletim sistemidir: C-level AI yönetim kurulu, chat-first kurumsal asistan, araç kullanan otonom ajanlar ve Stüdyo ile teklif, sözleşme, sunum ve rapor üretimi tek platformda toplanır. Türkçe, Almanca ve İngilizce çalışır."}},
+        {"@type":"Question","name":"GEO (Generative Engine Optimization) nedir, AIWATCH ne ölçer?","acceptedAnswer":{"@type":"Answer","text":"GEO, markanın yapay zeka motorlarının cevaplarındaki görünürlüğünü ölçme ve iyileştirme disiplinidir. AIWATCH; ChatGPT, Gemini, DeepSeek, Llama ve Qwen'de marka anlatımını, Google AI Overview'daki varlığı ve AI cevaplarının atıf kaynaklarını ölçer, halüsinasyonları tespit eder."}},
+        {"@type":"Question","name":"Pilot süreci nasıl işler?","acceptedAnswer":{"@type":"Answer","text":"Bir saatlik keşif görüşmesinde use case ve mevcut sistemler dinlenir; pilot kapsamı ve ölçüm KPI'ları birlikte tanımlanır. Pilot ölçülebilir sonuç ürettikten sonra yaygınlaştırma planlanır."}},
+        {"@type":"Question","name":"FirmaCom kimin için?","acceptedAnswer":{"@type":"Answer","text":"Yeni şirket kuranlar ve kurulu şirketler için: kuruluş belge setini üretir, yolculuğu adım adım takip eder; banka, POS, e-imza/KEP ve sigorta gibi hizmetlerde alternatif karşılaştırma ve başvuru takibi sunar. Müşteriye ücretsizdir."}}
+      ]
+    }
+  ]
 }
 </script>
 <link rel="alternate" hreflang="tr" href="https://finhouse.ai/">
@@ -156,6 +214,18 @@ h2 em{font-style:italic;font-weight:400;color:var(--accent)}
 .sectors .go{font-family:var(--mono);font-size:12px;color:var(--accent)}
 .sectors .hl{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
   background:var(--accent-tint);color:var(--accent-ink);padding:3px 9px;border-radius:6px;margin-bottom:10px}
+
+/* SSS */
+.faq{border-top:1px solid var(--line-strong)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{display:grid;grid-template-columns:56px 1fr auto;gap:18px;align-items:baseline;padding:22px 6px;cursor:pointer;list-style:none;transition:background .2s}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary:hover{background:var(--surface)}
+.faq summary .no{font-family:var(--mono);font-size:12px;color:var(--subtle)}
+.faq summary h3{font-family:var(--display);font-size:20px;font-weight:550;letter-spacing:-.01em}
+.faq summary .pm{font-family:var(--mono);font-size:16px;color:var(--subtle);transition:transform .25s}
+.faq details[open] summary .pm{transform:rotate(45deg);color:var(--accent)}
+.faq .a{padding:0 6px 26px 74px;max-width:72ch;color:var(--ink-2);font-size:14px;line-height:1.75}
 
 /* CTA band */
 .cta-band{background:var(--ink);color:var(--paper);padding:76px 0}
@@ -465,6 +535,57 @@ footer .links a:hover{color:var(--ink)}
           <p>Hasar süreçleri, çağrı karşılama ve doküman yoğun operasyonlarda hız + doğruluk iyileştirmesi.</p>
           <span class="go">Detaylı incele →</span>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 SSS -->
+  <section class="band" id="sss">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow"><b>06</b> · Sık sorulanlar</div>
+          <h2>Kısa cevaplar, <em>net</em> taahhütler.</h2>
+        </div>
+        <p>Burada olmayan sorunuz için: info@finhouse.ai</p>
+      </div>
+      <div class="faq rv">
+        <details>
+          <summary><span class="no">/01</span><h3>FinHouse.ai ne yapar?</h3><span class="pm">+</span></summary>
+          <div class="a">FinHouse.ai; bankalar, ödeme kuruluşları ve sigorta şirketleri için KVKK uyumlu yapay zeka
+            çözümleri geliştiren ve entegre eden bir çözüm evidir. Üç ürünü vardır: FirmaAI (kurumsal AI platformu),
+            AIWATCH (AI görünürlük platformu) ve FirmaCom (şirket kuruluş ve hizmet platformu).</div>
+        </details>
+        <details>
+          <summary><span class="no">/02</span><h3>Verilerimiz nerede işlenir, KVKK uyumu nasıl sağlanır?</h3><span class="pm">+</span></summary>
+          <div class="a">Kişisel veri içeren sorgular kurumun kendi altyapısındaki yerel büyük dil modelinde işlenir;
+            buluta gitmesi gereken içerik önce maskelenir. Sistem on-premise kurulabilir, ajan aksiyonları denetim
+            izine yazılır ve kritik adımlar insan onayına düşer.</div>
+        </details>
+        <details>
+          <summary><span class="no">/03</span><h3>FirmaAI nedir?</h3><span class="pm">+</span></summary>
+          <div class="a">FirmaAI, şirketin yapay zeka işletim sistemidir: C-level AI yönetim kurulu, chat-first kurumsal
+            asistan, araç kullanan otonom ajanlar ve Stüdyo ile teklif, sözleşme, sunum ve rapor üretimi tek platformda
+            toplanır. Türkçe, Almanca ve İngilizce çalışır.</div>
+        </details>
+        <details>
+          <summary><span class="no">/04</span><h3>GEO nedir, AIWATCH ne ölçer?</h3><span class="pm">+</span></summary>
+          <div class="a">GEO (Generative Engine Optimization), markanın yapay zeka motorlarının cevaplarındaki
+            görünürlüğünü ölçme ve iyileştirme disiplinidir. AIWATCH; ChatGPT, Gemini, DeepSeek, Llama ve Qwen'de
+            marka anlatımını, Google AI Overview'daki varlığı ve AI cevaplarının atıf kaynaklarını ölçer,
+            halüsinasyonları tespit eder.</div>
+        </details>
+        <details>
+          <summary><span class="no">/05</span><h3>Pilot süreci nasıl işler?</h3><span class="pm">+</span></summary>
+          <div class="a">Bir saatlik keşif görüşmesinde use case ve mevcut sistemler dinlenir; pilot kapsamı ve ölçüm
+            KPI'ları birlikte tanımlanır. Pilot ölçülebilir sonuç ürettikten sonra yaygınlaştırma planlanır.</div>
+        </details>
+        <details>
+          <summary><span class="no">/06</span><h3>FirmaCom kimin için?</h3><span class="pm">+</span></summary>
+          <div class="a">Yeni şirket kuranlar ve kurulu şirketler için: kuruluş belge setini üretir, yolculuğu adım adım
+            takip eder; banka, POS, e-imza/KEP ve sigorta gibi hizmetlerde alternatif karşılaştırma ve başvuru takibi
+            sunar. Müşteriye ücretsizdir.</div>
+        </details>
       </div>
     </div>
   </section>
