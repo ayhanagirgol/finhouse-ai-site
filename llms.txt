@@ -40,6 +40,21 @@ uyum/denetim alanlarında çözüm entegrasyonu yapar. Çalışma modeli: pilot 
 - [Workflow & Analytics (süreç analitiği)](https://finhouse.ai/workflow-analytics)
 - Agentic iş akışları, AI test & doğruluk, uyum & denetim (kanıt paketleri, karar kayıtları)
 
+## Danışmanlık ve Özel Geliştirme
+
+Hazır ürünlerin yanında kuruma özel danışmanlık ve geliştirme hizmeti verilir:
+
+- AI altyapı ve uygulama danışmanlığı: yerel model (GPU sunucu, vLLM) ve RAG mimarisi kurulumu,
+  KVKK uyumlu veri akışı, model seçimi, maliyet/performans dengesi, pilottan üretime yol haritası.
+- AI Agent tasarımları: kuruma özgü ajan kurgusu — görev tanımı, araç seti (mail, CRM, doküman,
+  mevzuat), insan onay kapıları (HITL) ve denetim izi.
+- Otonom AI agent kurulum ve kullandırımı: tasarlanan ajanların canlıya alınması, ekibe açılması,
+  kullanıcı eğitimi, geri bildirim döngüsü ve sürekli iyileştirme.
+- AI ürün entegrasyonları: mevcut sistemlere (ERP, CRM, çekirdek bankacılık, e-posta, doküman
+  yönetimi) ve üçüncü parti servislere API düzeyinde yapay zeka entegrasyonu.
+
+İletişim: info@finhouse.ai
+
 ## Sektörler
 
 - [Bankacılık](https://finhouse.ai/sectors/banking.html): Öne çıkan çözüm, Kredi Tahsis

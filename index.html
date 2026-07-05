@@ -215,6 +215,15 @@ h2 em{font-style:italic;font-weight:400;color:var(--accent)}
 .sectors .hl{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
   background:var(--accent-tint);color:var(--accent-ink);padding:3px 9px;border-radius:6px;margin-bottom:10px}
 
+/* danışmanlık servis grid */
+.svc{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-strong)}
+.svc .item{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:28px 22px 28px 4px;border-bottom:1px solid var(--line)}
+.svc .item:nth-child(odd){border-right:1px solid var(--line)}
+.svc .no{font-family:var(--mono);font-size:12px;color:var(--accent);padding-top:4px}
+.svc h3{font-family:var(--display);font-size:20px;font-weight:550;letter-spacing:-.01em;margin-bottom:7px;color:var(--ink)}
+.svc p{font-size:13.5px;color:var(--muted);line-height:1.6;max-width:48ch}
+.svc .minis{margin-top:10px}
+
 /* SSS */
 .faq{border-top:1px solid var(--line-strong)}
 .faq details{border-bottom:1px solid var(--line)}
@@ -283,6 +292,7 @@ footer .links a:hover{color:var(--ink)}
       <a href="#firmaai">FirmaAI</a>
       <a href="#aiwatch">AIWATCH</a>
       <a href="#sektorler">Sektörler</a>
+      <a href="#danismanlik">Danışmanlık</a>
       <a href="./blog.html">Blog</a>
       <a class="btn btn-ink" href="./demo.html">Demo talep et <span class="arr">→</span></a>
     </div>
@@ -539,12 +549,67 @@ footer .links a:hover{color:var(--ink)}
     </div>
   </section>
 
-  <!-- 06 SSS -->
+  <!-- 06 DANIŞMANLIK & ÖZEL GELİŞTİRME -->
+  <section class="band" id="danismanlik">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow"><b>06</b> · Danışmanlık &amp; Özel Geliştirme</div>
+          <h2>Ürünlerin ötesinde, <em>size özel</em> kurgu.</h2>
+        </div>
+        <p>Hazır ürün yeterli olmadığında, altyapıdan ajana kadar kuruma özel tasarlar ve devreye alırız.</p>
+      </div>
+      <div class="svc rv">
+        <div class="item">
+          <span class="no">/01</span>
+          <div>
+            <h3>AI altyapı ve uygulama danışmanlığı</h3>
+            <p>Yerel model (GPU sunucu, vLLM) ve RAG mimarisinin kurulumu, KVKK uyumlu veri akışı,
+               model seçimi ve maliyet/performans dengesi. Pilottan üretime yol haritası.</p>
+            <div class="minis"><span class="mini">On-premise LLM</span><span class="mini">RAG mimarisi</span><span class="mini">KVKK tasarımı</span></div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="no">/02</span>
+          <div>
+            <h3>AI Agent tasarımları</h3>
+            <p>Kuruma özgü ajan kurgusu: görev tanımı, araç seti (mail, CRM, doküman, mevzuat),
+               onay kapıları ve denetim izi. İş akışına oturan, güvenli ajan mimarisi.</p>
+            <div class="minis"><span class="mini">Araç seti</span><span class="mini">HITL kapıları</span><span class="mini">Audit trail</span></div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="no">/03</span>
+          <div>
+            <h3>Otonom AI agent kurulum ve kullandırımı</h3>
+            <p>Tasarlanan ajanların canlıya alınması, ekibin kullanımına açılması ve izlenmesi.
+               Kullanıcı eğitimi, geri bildirim döngüsü ve sürekli iyileştirme.</p>
+            <div class="minis"><span class="mini">Canlıya alma</span><span class="mini">Kullanıcı eğitimi</span><span class="mini">İzleme &amp; iyileştirme</span></div>
+          </div>
+        </div>
+        <div class="item">
+          <span class="no">/04</span>
+          <div>
+            <h3>AI ürün entegrasyonları</h3>
+            <p>Mevcut sistemlerinize (ERP, CRM, çekirdek bankacılık, e-posta, doküman yönetimi)
+               ve üçüncü parti servislere yapay zekânın API düzeyinde bağlanması.</p>
+            <div class="minis"><span class="mini">ERP / CRM</span><span class="mini">API entegrasyon</span><span class="mini">Üçüncü parti</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="cta-row rv" style="margin-top:26px">
+        <a class="btn btn-ink" href="./demo.html">Danışmanlık için görüşelim <span class="arr">→</span></a>
+        <a class="btn btn-ghost" href="mailto:info@finhouse.ai?subject=Dan%C4%B1%C5%9Fmanl%C4%B1k%20%26%20%C3%96zel%20Geli%C5%9Ftirme">info@finhouse.ai</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 07 SSS -->
   <section class="band" id="sss">
     <div class="wrap">
       <div class="sec-head rv">
         <div>
-          <div class="eyebrow"><b>06</b> · Sık sorulanlar</div>
+          <div class="eyebrow"><b>07</b> · Sık sorulanlar</div>
           <h2>Kısa cevaplar, <em>net</em> taahhütler.</h2>
         </div>
         <p>Burada olmayan sorunuz için: info@finhouse.ai</p>
