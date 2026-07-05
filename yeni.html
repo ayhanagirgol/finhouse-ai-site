@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>FinHouse.ai | Finansal Yapay Zeka Çözümleri Evi</title>
+<meta name="description" content="FinHouse.ai; bankalar, ödeme kuruluşları ve sigorta şirketleri için finansal yapay zeka çözümleri. PatronAI kurumsal AI platformu, AIWATCH AI görünürlük platformu, doküman zekâsı (IDP) ve süreç analitiği.">
+<meta name="keywords" content="finansal yapay zeka, ai marketplace, banka ai, bankacılık yapay zeka, ödeme kuruluşu ai, sigorta yapay zeka, doküman zekası, IDP, kredi tahsis ai, AI governance, KVKK uyumlu AI">
+<link rel="canonical" href="https://finhouse.ai/">
+<meta name="robots" content="noindex,nofollow"><!-- ÖNİZLEME: index.html'e taşınırken index,follow yapılacak -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FinHouse.ai">
+<meta property="og:title" content="FinHouse.ai | Finansal Yapay Zeka Çözümleri Evi">
+<meta property="og:description" content="Bankacılık, ödeme ve sigorta için KVKK uyumlu yapay zeka. PatronAI kurumsal AI platformu, AIWATCH AI görünürlük platformu ve FirmaCom şirket kuruluş & hizmet platformu.">
+<meta property="og:url" content="https://finhouse.ai/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="FinHouse.ai | Finansal Yapay Zeka Çözümleri Evi">
+<meta name="twitter:description" content="Bankacılık, ödeme ve sigorta için KVKK uyumlu yapay zeka. PatronAI, AIWATCH ve FirmaCom.">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Organization",
+  "name":"FinHouse.ai",
+  "url":"https://finhouse.ai/",
+  "sameAs":["https://www.linkedin.com/company/finhouse-ai"]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,550;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4EE; --paper-2:#EFEDE5; --surface:#FFFFFF;
+  --ink:#0E0E0C; --ink-2:#2A2924; --muted:#6B6962; --subtle:#97948B;
+  --line:rgba(14,14,12,.08); --line-strong:rgba(14,14,12,.16);
+  --accent:#2F5D4B; --accent-ink:#1B3A2E; --accent-tint:#E6EEE9;
+  --amber:#C99840; --amber-tint:#F6ECD8;
+  --warm:#C2754F;  --warm-tint:#F4E6DC;
+  --display:'Fraunces',Georgia,serif;
+  --body:'Inter',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(14,14,12,.028) 1px,transparent 1px);background-size:26px 26px}
+::selection{background:var(--accent);color:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.mono{font-family:var(--mono)}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--accent);font-weight:500}
+
+/* ── masthead ─────────────────────────── */
+.microbar{border-bottom:1px solid var(--line);}
+.microbar .wrap{display:flex;justify-content:space-between;gap:16px;padding-top:9px;padding-bottom:9px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--subtle)}
+.microbar span b{color:var(--accent);font-weight:500}
+nav.masthead{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
+  border-bottom:2px solid var(--ink)}
+nav.masthead .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.wordmark{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em}
+.wordmark i{font-style:italic;font-weight:400;color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
+.navlinks a{position:relative;color:var(--ink-2)}
+.navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:var(--accent);transition:width .25s}
+.navlinks a:not(.btn):hover::after{width:100%}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:8px;
+  border:1px solid var(--ink);transition:all .2s;cursor:pointer}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* ── hero ─────────────────────────────── */
+.hero{padding:88px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:7fr 4fr;gap:72px;align-items:end}
+h1{font-family:var(--display);font-weight:550;font-size:clamp(46px,6.6vw,84px);line-height:.98;letter-spacing:-.022em;margin:20px 0 26px}
+h1 .dim{color:var(--muted)}
+h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.hero p.lede{font-size:17px;line-height:1.65;color:var(--ink-2);max-width:56ch;margin-bottom:32px}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:5px 11px;border-radius:999px;
+  border:1px solid var(--line-strong);color:var(--muted)}
+.chip.sage{background:var(--accent-tint);border-color:transparent;color:var(--accent-ink)}
+.chip.amber{background:var(--amber-tint);border-color:transparent;color:#7A5A1E}
+.pulse{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--accent);margin-right:6px;animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+/* künye panel */
+.kunye{border:1px solid var(--line-strong);background:var(--surface);border-radius:12px;overflow:hidden}
+.kunye .khead{padding:14px 20px;border-bottom:1px solid var(--line);font-family:var(--mono);font-size:10.5px;
+  letter-spacing:.16em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between}
+.kunye .row{display:flex;justify-content:space-between;align-items:baseline;padding:13px 20px;border-bottom:1px solid var(--line)}
+.kunye .row:last-child{border-bottom:0}
+.kunye .k{font-size:13px;color:var(--muted)}
+.kunye .v{font-family:var(--mono);font-size:13px;font-weight:500;text-align:right}
+.kunye .v small{color:var(--subtle);font-weight:400}
+
+/* ── section scaffolding ──────────────── */
+section.band{border-top:1px solid var(--line-strong);padding:64px 0}
+.sec-head{display:grid;grid-template-columns:7fr 4fr;gap:72px;align-items:end;margin-bottom:44px}
+h2{font-family:var(--display);font-weight:550;font-size:clamp(30px,3.6vw,46px);line-height:1.04;letter-spacing:-.018em;margin-top:14px}
+h2 em{font-style:italic;font-weight:400;color:var(--accent)}
+.sec-head p{color:var(--muted);font-size:15px;max-width:44ch;justify-self:end;align-self:end}
+
+/* çözümler index list */
+.idx{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line-strong)}
+.idx a{display:grid;grid-template-columns:56px 1fr auto;gap:18px;align-items:baseline;padding:26px 18px 26px 6px;
+  border-bottom:1px solid var(--line);transition:background .2s}
+.idx a:nth-child(odd){border-right:1px solid var(--line)}
+.idx a:hover{background:var(--surface)}
+.idx .no{font-family:var(--mono);font-size:12px;color:var(--subtle)}
+.idx h3{font-family:var(--display);font-size:21px;font-weight:550;letter-spacing:-.01em;margin-bottom:5px}
+.idx p{font-size:13.5px;color:var(--muted);line-height:1.55;max-width:46ch}
+.idx .go{font-family:var(--mono);font-size:13px;color:var(--subtle);transition:all .2s}
+.idx a:hover .go{color:var(--accent);transform:translateX(3px)}
+
+/* ürün spread */
+.spread{display:grid;grid-template-columns:5fr 7fr;gap:72px}
+.spread.flip{grid-template-columns:7fr 5fr}
+.spread .intro h2{margin-bottom:16px}
+.spread .intro p{color:var(--ink-2);font-size:15px;margin-bottom:26px;max-width:46ch}
+.featlist{border-top:1px solid var(--line-strong)}
+.feat{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:22px 4px;border-bottom:1px solid var(--line)}
+.feat .no{font-family:var(--mono);font-size:11px;color:var(--subtle);padding-top:5px}
+.feat h3{font-family:var(--display);font-size:19px;font-weight:550;margin-bottom:6px}
+.feat p{font-size:13.5px;color:var(--muted);line-height:1.6;max-width:62ch;margin-bottom:10px}
+.minis{display:flex;gap:6px;flex-wrap:wrap}
+.mini{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:6px;
+  background:var(--paper-2);color:var(--muted)}
+.stat-strip{display:flex;gap:0;border:1px solid var(--line-strong);border-radius:12px;background:var(--surface);overflow:hidden;margin-top:26px}
+.stat{flex:1;padding:18px 20px;border-right:1px solid var(--line)}
+.stat:last-child{border-right:0}
+.stat .n{font-family:var(--mono);font-size:24px;font-weight:500;letter-spacing:-.02em}
+.stat .n i{font-style:normal;font-size:13px;color:var(--subtle)}
+.stat .l{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:3px}
+
+/* sektörler */
+.sectors{display:grid;grid-template-columns:1fr 1fr 1fr;border-top:1px solid var(--line-strong)}
+.sectors a{padding:30px 26px 34px 4px;border-bottom:1px solid var(--line);position:relative;transition:background .2s}
+.sectors a+a{border-left:1px solid var(--line);padding-left:26px}
+.sectors a:hover{background:var(--surface)}
+.sectors .no{font-family:var(--mono);font-size:11px;color:var(--subtle)}
+.sectors h3{font-family:var(--display);font-size:26px;font-weight:550;margin:10px 0 8px}
+.sectors p{font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.sectors .go{font-family:var(--mono);font-size:12px;color:var(--accent)}
+.sectors .hl{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;
+  background:var(--accent-tint);color:var(--accent-ink);padding:3px 9px;border-radius:6px;margin-bottom:10px}
+
+/* CTA band */
+.cta-band{background:var(--ink);color:var(--paper);padding:76px 0}
+.cta-band .wrap{display:grid;grid-template-columns:7fr 4fr;gap:72px;align-items:center}
+.cta-band .eyebrow{color:rgba(246,244,238,.5)}
+.cta-band h2{color:var(--paper)}
+.cta-band h2 em{color:#8FBCA8}
+.cta-band p{color:rgba(246,244,238,.72);font-size:15px;margin-top:14px;max-width:52ch}
+.cta-band .btn-paper{background:var(--paper);color:var(--ink);border-color:var(--paper);justify-self:end}
+.cta-band .btn-paper:hover{background:#fff}
+.cta-band .mailrow{margin-top:14px;font-family:var(--mono);font-size:12.5px;color:rgba(246,244,238,.55);text-align:right}
+.cta-band .mailrow a{color:#8FBCA8;border-bottom:1px solid rgba(143,188,168,.4)}
+
+/* footer */
+footer{padding:34px 0 46px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline}
+footer .fm{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)}
+footer .links{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+footer .links a:hover{color:var(--ink)}
+
+/* reveal motion */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+.hero .rv{transition-delay:calc(var(--d,0)*90ms)}
+
+@media(max-width:960px){
+  .hero .wrap,.sec-head,.spread,.spread.flip,.cta-band .wrap{grid-template-columns:1fr;gap:36px}
+  .sec-head p{justify-self:start}
+  .idx{grid-template-columns:1fr}
+  .idx a:nth-child(odd){border-right:0}
+  .sectors{grid-template-columns:1fr}
+  .sectors a+a{border-left:0;padding-left:4px}
+  .stat-strip{flex-direction:column}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .navlinks a:not(.btn){display:none}
+  .cta-band .btn-paper{justify-self:start}
+  .cta-band .mailrow{text-align:left}
+}
+</style>
+</head>
+<body>
+
+<div class="microbar">
+  <div class="wrap">
+    <span>Finansal Yapay Zeka Çözümleri Evi</span>
+    <span>İstanbul · <b>KVKK uyumlu</b> · On-premise &amp; bulut</span>
+  </div>
+</div>
+
+<nav class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="./index.html">finhouse<i>.ai</i></a>
+    <div class="navlinks">
+      <a href="#cozumler">Çözümler</a>
+      <a href="#patronai">PatronAI</a>
+      <a href="#aiwatch">AIWATCH</a>
+      <a href="#sektorler">Sektörler</a>
+      <a href="./blog.html">Blog</a>
+      <a class="btn btn-ink" href="./demo.html">Demo talep et <span class="arr">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow rv" style="--d:0"><b>Finans sektörüne özel</b> · Doküman zekâsı · Agentic otomasyon · AI görünürlük</div>
+        <h1 class="rv" style="--d:1">Finansal yapay zekâ,<br/><span class="dim">kurumunuzun</span> <em>içinde.</em></h1>
+        <p class="lede rv" style="--d:2">Bankalar, ödeme kuruluşları ve sigorta şirketleri için yapay zekâyı
+          kurumun içine kuruyoruz: kişisel veri yerel modelde işlenir, her adım denetlenebilir,
+          değer ölçülebilir. Pilotla başlar, yaygınlaştırmayla ölçekleriz.</p>
+        <div class="cta-row rv" style="--d:3">
+          <a class="btn btn-ink" href="./demo.html">Canlı demo talep et <span class="arr">→</span></a>
+          <a class="btn btn-ghost" href="#cozumler">Çözümleri incele</a>
+        </div>
+        <div class="chips rv" style="--d:4">
+          <span class="chip sage"><span class="pulse"></span>Yerel model — veri dışarı çıkmaz</span>
+          <span class="chip">Audit-ready izlenebilirlik</span>
+          <span class="chip">Pilot → Yaygınlaştırma</span>
+        </div>
+      </div>
+      <aside class="kunye rv" style="--d:5">
+        <div class="khead"><span>Künye</span><span>2026</span></div>
+        <div class="row"><span class="k">Ürün</span><span class="v">03 <small>— PatronAI · AIWATCH · FirmaCom</small></span></div>
+        <div class="row"><span class="k">Sektör</span><span class="v">03 <small>— banka · ödeme · sigorta</small></span></div>
+        <div class="row"><span class="k">Dil</span><span class="v">TR · DE · EN</span></div>
+        <div class="row"><span class="k">Model</span><span class="v">Yerel LLM <small>+ maskeli bulut</small></span></div>
+        <div class="row"><span class="k">Mevzuat kasası</span><span class="v">BDDK · TCMB · RG</span></div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- 01 ÇÖZÜMLER -->
+  <section class="band" id="cozumler">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow"><b>01</b> · Çözümler</div>
+          <h2>Altı başlıkta <em>kurumsal</em> yapay zekâ.</h2>
+        </div>
+        <p>Bankacılık, ödeme ve sigorta için mimari, kontrol seti ve KPI'larıyla birlikte teslim edilir.</p>
+      </div>
+      <div class="idx rv">
+        <a href="./flows/idp.html">
+          <span class="no">/01</span>
+          <span><h3>IDP &amp; Doküman Zekâsı</h3><p>Fatura, sözleşme, talimat ve formlarda sınıflandırma + alan çıkarımı ile otomasyon.</p></span>
+          <span class="go">→</span>
+        </a>
+        <a href="./index.html#patronai0" onclick="document.getElementById('patronai').scrollIntoView();return false;">
+          <span class="no">/02</span>
+          <span><h3>Agentic İş Akışları</h3><p>Onay zinciri, görev atama, ERP/CRM entegrasyonu ve aksiyon çıkarımıyla uçtan uca süreç.</p></span>
+          <span class="go">→</span>
+        </a>
+        <a href="./voice-ai-contact-center.html">
+          <span class="no">/03</span>
+          <span><h3>Voice AI</h3><p>Çağrı karşılama, niyet tespiti, bilgi toplama ve self-servis senaryoları.</p></span>
+          <span class="go">→</span>
+        </a>
+        <a href="./workflow-analytics.html">
+          <span class="no">/04</span>
+          <span><h3>Workflow &amp; Analytics</h3><p>İş akışı keşfi, darboğaz analizi, SLA kaçırma kök-nedenleri ve otomasyon adayları.</p></span>
+          <span class="go">→</span>
+        </a>
+        <a href="./finansal-yapay-zeka-cozumleri.html">
+          <span class="no">/05</span>
+          <span><h3>AI Test &amp; Doğruluk</h3><p>Model doğruluğu, regresyon testleri, benchmark ve üretimde performans izleme.</p></span>
+          <span class="go">→</span>
+        </a>
+        <a href="./finansal-yapay-zeka-cozumleri.html">
+          <span class="no">/06</span>
+          <span><h3>Uyum &amp; Denetim</h3><p>Denetim izleri, karar kayıtları, kanıt paketleri — KVKK ve BDDK beklentilerine uygun işletim.</p></span>
+          <span class="go">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 02 PATRONAI -->
+  <section class="band" id="patronai">
+    <div class="wrap">
+      <div class="spread">
+        <div class="intro rv">
+          <div class="eyebrow"><b>02</b> · Ürün</div>
+          <h2>PatronAI — şirketinizin <em>yapay zekâ</em> işletim sistemi.</h2>
+          <p>C-level AI yönetim kurulu, chat-first kurumsal asistan ve araç kullanan otonom ajanlar.
+             Türkçe, Almanca ve İngilizce. On-premise (kendi GPU sunucunuz) veya bulut.</p>
+          <a class="btn btn-ink" href="https://app.finhouse.ai" target="_blank" rel="noopener">PatronAI'yi dene <span class="arr">→</span></a>
+          <div class="stat-strip">
+            <div class="stat"><div class="n">C-Level</div><div class="l">AI yönetim kurulu</div></div>
+            <div class="stat"><div class="n">3<i> dil</i></div><div class="l">TR · DE · EN</div></div>
+            <div class="stat"><div class="n">%100<i> yerel</i></div><div class="l">PII işleme</div></div>
+          </div>
+        </div>
+        <div class="featlist rv">
+          <div class="feat">
+            <span class="no">/01</span>
+            <div>
+              <h3>AI yönetim kurulu + otonom ajanlar</h3>
+              <p>C-level persona'lar stratejik soruları kendi uzmanlık alanından yanıtlar. Ajanlar mail, takvim,
+                 görev, CRM ve doküman araçlarını kullanır; kritik aksiyonlar insan onayına düşer.
+                 Ajan tanımları JSON ile içe aktarılır — kuruma özel ajan dakikalar içinde.</p>
+              <div class="minis"><span class="mini">C-Level Board</span><span class="mini">Araç kullanan ajanlar</span><span class="mini">İnsan onayı (HITL)</span><span class="mini">Ajan içe aktarma</span></div>
+            </div>
+          </div>
+          <div class="feat">
+            <span class="no">/02</span>
+            <div>
+              <h3>Stüdyo: doküman üretimi + mail AI</h3>
+              <p>Teklif, sözleşme, sunum ve rapor üretimi (Word/Excel/PDF/PowerPoint) — chat'ten stüdyoya tek akış.
+                 Mail triyajı ve yanıt taslağı, sabah brifingi, işe alım ajanıyla evrak denetimi,
+                 WhatsApp'tan görev, banka ekstresi analizi.</p>
+              <div class="minis"><span class="mini">Teklif &amp; sözleşme</span><span class="mini">Sunum &amp; rapor</span><span class="mini">Mail triyaj</span><span class="mini">Ekstre analizi</span></div>
+            </div>
+          </div>
+          <div class="feat">
+            <span class="no">/03</span>
+            <div>
+              <h3>KVKK &amp; veri egemenliği</h3>
+              <p>Kişisel veri içeren sorgular kurum içindeki yerel modelde işlenir; buluta giden içerik maskelenir.
+                 Sektörel mevzuat kasası (BDDK, TCMB, Resmî Gazete) cevapları madde atıflı verir.
+                 Denetim izi ve karar kayıtları standart.</p>
+              <div class="minis"><span class="mini">Yerel LLM</span><span class="mini">PII maskeleme</span><span class="mini">Mevzuat RAG</span><span class="mini">Audit trail</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 03 AIWATCH -->
+  <section class="band" id="aiwatch">
+    <div class="wrap">
+      <div class="spread flip">
+        <div class="featlist rv">
+          <div class="feat">
+            <span class="no">/01</span>
+            <div>
+              <h3>Beş AI motorunda görünürlük</h3>
+              <p>ChatGPT, Gemini, DeepSeek, Llama ve Qwen markanızı nasıl anlatıyor? Marka bahsi, sıralama ve
+                 duygu tonundan bileşik GEO Index skoru; haftalık trend ve rakip karşılaştırma.</p>
+              <div class="minis"><span class="mini">GEO Index</span><span class="mini">Rakip analizi</span><span class="mini">Halüsinasyon tespiti</span></div>
+            </div>
+          </div>
+          <div class="feat">
+            <span class="no">/02</span>
+            <div>
+              <h3>Google AI Overview + Citation Intelligence</h3>
+              <p>Anahtar sorgularınızda AI Overview çıkıyor mu, siz atıf alıyor musunuz? AI cevaplarının atıf
+                 verdiği kaynakları çıkarır: hangi siteler sizi besliyor, hangi kaynaklarda yer almalısınız.</p>
+              <div class="minis"><span class="mini">AIO takibi</span><span class="mini">Citation rate</span><span class="mini">Kaynak istihbaratı</span></div>
+            </div>
+          </div>
+          <div class="feat">
+            <span class="no">/03</span>
+            <div>
+              <h3>Kişisel marka modu</h3>
+              <p>Influencer, sanatçı, sporcu ve yazarlar için ayrı arayüz ve metrikler —
+                 <a href="https://personal.aiwatch.com.tr" target="_blank" rel="noopener" style="color:var(--accent);border-bottom:1px solid var(--accent-tint)">personal.aiwatch.com.tr</a></p>
+              <div class="minis"><span class="mini">Kişisel GEO</span><span class="mini">Web itibar taraması</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="intro rv">
+          <div class="eyebrow"><b>03</b> · Ürün</div>
+          <h2>AIWATCH — markanızı <em>AI'ın gözünden</em> izleyin.</h2>
+          <p>Müşterileriniz artık aramıyor, soruyor. AIWATCH; AI motorlarının ve Google AI Overview'un
+             markanız hakkında ne söylediğini ölçer, yanlışları yakalar, görünürlüğünüzü büyütür.</p>
+          <a class="btn btn-ink" href="./aiwatch.html">AIWATCH'ı incele <span class="arr">→</span></a>
+          <div class="stat-strip">
+            <div class="stat"><div class="n">5</div><div class="l">AI motoru</div></div>
+            <div class="stat"><div class="n">0–100</div><div class="l">GEO Index</div></div>
+            <div class="stat"><div class="n">14<i> gün</i></div><div class="l">Ücretsiz deneme</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 04 FIRMACOM -->
+  <section class="band" id="firmacom">
+    <div class="wrap">
+      <div class="spread">
+        <div class="intro rv">
+          <div class="eyebrow"><b>04</b> · Yeni ürün</div>
+          <h2>FirmaCom — şirket kuruluşu <em>ve sonrası,</em> tek platform.</h2>
+          <p>Yeni şirket için kuruluş belge setini üretir, yolculuğu adım adım takip eder; kurulu şirketlere
+             banka, POS, e-imza/KEP ve sigorta gibi hizmetlerde karşılaştırma ve başvuru takibi sunar.
+             Belgeler tek kasada. Müşteriye ücretsiz.</p>
+          <div class="cta-row">
+            <a class="btn btn-ink" href="mailto:info@finhouse.ai?subject=FirmaCom%20Erken%20Eri%C5%9Fim">Erken erişim talebi <span class="arr">→</span></a>
+          </div>
+          <div class="chips"><span class="chip amber">Erken erişim</span><span class="chip">Kuruluş yolculuğu</span><span class="chip">Belge kasası</span><span class="chip">Hizmet karşılaştırma</span></div>
+        </div>
+        <div class="featlist rv">
+          <div class="feat">
+            <span class="no">/01</span>
+            <div>
+              <h3>Kuruluş belge seti + yolculuk</h3>
+              <p>Şahıs ve limited kuruluşunda gereken belgeler tek profilden üretilir; noterden vergi dairesine
+                 tüm adımlar takvimli yolculukta izlenir.</p>
+            </div>
+          </div>
+          <div class="feat">
+            <span class="no">/02</span>
+            <div>
+              <h3>Kurulu şirkete hizmet otomasyonu</h3>
+              <p>Banka hesabı, POS/sanal POS, e-imza/KEP, kurumsal hat, sigorta — alternatifleri karşılaştırır,
+                 başvuru evrakını kasadan otomatik hazırlar, süreci takip eder.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 05 SEKTÖRLER -->
+  <section class="band" id="sektorler">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <div>
+          <div class="eyebrow"><b>05</b> · Sektörler</div>
+          <h2>Sahada <em>kanıtlanmış</em> kullanım.</h2>
+        </div>
+        <p>Her sektör sayfası etki, KPI seti ve örnek akışlarla birlikte gelir.</p>
+      </div>
+      <div class="sectors rv">
+        <a href="./sectors/banking.html">
+          <span class="no">/01</span>
+          <h3>Bankacılık</h3>
+          <span class="hl">Öne çıkan: Kredi Tahsis Asistanı</span>
+          <p>5411 + BDDK rehberinden beslenen mevzuat kasası, madde atıflı cevaplar, komiteye karar öneri
+             notu taslağı — nihai karar her zaman insanın. Canlı demo mevcut.</p>
+          <span class="go">Detaylı incele →</span>
+        </a>
+        <a href="./sectors/payments.html">
+          <span class="no">/02</span>
+          <h3>Ödeme &amp; E-Para</h3>
+          <p>Merchant onboarding, risk/uyum kontrolleri, doküman yönetimi, SLA takibi ve operasyon otomasyonu.</p>
+          <span class="go">Detaylı incele →</span>
+        </a>
+        <a href="./sectors/insurance.html">
+          <span class="no">/03</span>
+          <h3>Sigorta</h3>
+          <p>Hasar süreçleri, çağrı karşılama ve doküman yoğun operasyonlarda hız + doğruluk iyileştirmesi.</p>
+          <span class="go">Detaylı incele →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section class="cta-band">
+    <div class="wrap">
+      <div class="rv">
+        <div class="eyebrow">Demo · İletişim</div>
+        <h2>Kurumunuz, use case'iniz,<br/>mevcut sistemleriniz — <em>bir saat yeter.</em></h2>
+        <p>Kısa bir görüşmede use case'inizi dinler, pilot kapsamını ve ölçüm KPI'larını birlikte tanımlarız.</p>
+      </div>
+      <div class="rv" style="justify-self:end;text-align:right">
+        <a class="btn btn-paper" href="./demo.html">Demo talep et <span class="arr">→</span></a>
+        <div class="mailrow">veya <a href="mailto:info@finhouse.ai">info@finhouse.ai</a></div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="fm">© <span id="y"></span> FinHouse.ai — Finansal Yapay Zeka Çözümleri Evi</span>
+    <div class="links">
+      <a href="https://app.finhouse.ai" target="_blank" rel="noopener">PatronAI</a>
+      <a href="./aiwatch.html">AIWATCH</a>
+      <a href="./blog.html">Blog</a>
+      <a href="mailto:info@finhouse.ai">info@finhouse.ai</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent = new Date().getFullYear();
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }), { threshold: .12 });
+document.querySelectorAll('.rv').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
