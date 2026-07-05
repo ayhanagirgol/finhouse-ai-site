@@ -51,6 +51,17 @@ uyum/denetim alanlarında çözüm entegrasyonu yapar. Çalışma modeli: pilot 
 - [Sigorta](https://finhouse.ai/sectors/insurance.html): hasar süreçleri, çağrı karşılama,
   doküman yoğun operasyonlar
 
+## İçerik / Blog
+
+- [Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek: Veri Kaynakları Rehberi](https://finhouse.ai/blog-kredi-tahsis-yapay-zeka.html):
+  Kredi yaşam döngüsünde yapay zekânın değer kattığı yerler (tahsis, izleme/erken uyarı,
+  TFRS 9 beklenen kredi zararı, tahsilat); kendi modelini eğitmek için beş veri kaynağı grubu
+  (iç veri, KKB/Findeks kredi bürosu, mali tablo ve banka ekstresi, TCMB/TÜİK makro veri,
+  5411+BDDK mevzuat verisi); veriyi hazırlama tuzakları (temerrüt etiketi, zaman-tutarlı
+  bölme, veri sızıntısı, sınıf dengesizliği); iki katmanlı mimari (nicel skorlama + LLM/RAG
+  muhakeme); BDDK model risk yönetimi ve KVKK md. 11 otomatik karara itiraz çerçevesinde
+  açıklanabilirlik.
+
 ## İletişim
 
 - Demo talebi: https://finhouse.ai/demo

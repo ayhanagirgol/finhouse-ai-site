@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek: Veri Kaynakları Rehberi | FinHouse.ai</title>
+<meta name="description" content="Bankalarda kredi tahsis süreçlerinde yapay zeka nasıl kullanılır, kendi modelinizi eğitmek için hangi veri kaynakları gerekir? KKB/Findeks, mali tablo ve ekstre, TCMB makro veri, BDDK mevzuatı; TFRS 9, KVKK ve açıklanabilirlik çerçevesinde pratik bir rehber.">
+<meta name="keywords" content="kredi tahsis yapay zeka, kredi skorlama modeli, model eğitimi veri kaynakları, KKB Findeks, TFRS 9 beklenen kredi zararı, BDDK kredi tahsis rehberi, kredi riski makine öğrenmesi, açıklanabilir yapay zeka kredi, KVKK otomatik karar, yerel LLM bankacılık">
+<link rel="canonical" href="https://finhouse.ai/blog-kredi-tahsis-yapay-zeka.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="FinHouse.ai">
+<meta property="og:title" content="Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek: Veri Kaynakları Rehberi">
+<meta property="og:description" content="Kredi tahsisinde yapay zekânın değer kattığı yerler, kendi modelinizi eğitmek için veri kaynakları haritası ve BDDK/TFRS 9/KVKK çerçevesinde açıklanabilirlik.">
+<meta property="og:url" content="https://finhouse.ai/blog-kredi-tahsis-yapay-zeka.html">
+<meta property="og:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek">
+<meta name="twitter:description" content="Kredi tahsisinde yapay zekâ, model eğitimi ve veri kaynakları — BDDK, TFRS 9 ve KVKK çerçevesinde pratik rehber.">
+<meta name="twitter:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg">
+<meta name="author" content="FinHouse.ai">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"BlogPosting",
+      "headline":"Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek: Veri Kaynakları Rehberi",
+      "description":"Bankalarda kredi tahsis süreçlerinde yapay zekânın değer kattığı yerler, kendi modelinizi eğitmek için gereken veri kaynakları ve BDDK/TFRS 9/KVKK çerçevesinde açıklanabilirlik.",
+      "inLanguage":"tr",
+      "datePublished":"2026-07-05",
+      "dateModified":"2026-07-05",
+      "image":"https://finhouse.ai/assets/og/finhouse-og.jpg",
+      "author":{"@type":"Organization","name":"FinHouse.ai","url":"https://finhouse.ai/"},
+      "publisher":{"@type":"Organization","name":"FinHouse.ai","logo":{"@type":"ImageObject","url":"https://finhouse.ai/assets/og/finhouse-og.jpg"}},
+      "mainEntityOfPage":{"@type":"WebPage","@id":"https://finhouse.ai/blog-kredi-tahsis-yapay-zeka.html"},
+      "keywords":"kredi tahsis yapay zeka, kredi skorlama modeli, veri kaynakları, KKB Findeks, TFRS 9, BDDK kredi tahsis rehberi, KVKK otomatik karar, açıklanabilir yapay zeka"
+    },
+    {
+      "@type":"FAQPage",
+      "mainEntity":[
+        {"@type":"Question","name":"Kredi tahsisinde yapay zeka nerede değer katar?","acceptedAnswer":{"@type":"Answer","text":"Yapay zeka kredinin yaşam döngüsünün her aşamasında değer katar: tahsiste temerrüt olasılığı tahmini ve dosya değerlendirme; izlemede davranışsal erken uyarı sinyalleri; TFRS 9 kapsamında beklenen kredi zararı (PD/LGD/EAD) hesaplaması; tahsilatta önceliklendirme. Nihai kredi kararı ise her zaman kredi komitesinde, yani insanda kalır."}},
+        {"@type":"Question","name":"Kendi kredi modelini eğitmek için hangi veri kaynakları gerekir?","acceptedAnswer":{"@type":"Answer","text":"Beş ana kaynak grubu vardır: (1) bankanın iç verisi — başvuru, hesap hareketi, ödeme performansı, teminat; (2) kredi bürosu verisi — KKB/Findeks bireysel ve ticari kredi notu, limit, risk ve gecikme bilgileri; (3) mali tablolar ve banka ekstreleri; (4) makro ve açık veri — TCMB EVDS, TÜİK, sektör verileri; (5) mevzuat verisi — 5411 sayılı Kanun ve BDDK rehberleri. Veri kalitesi, temerrüt etiketinin doğru tanımı ve zaman-tutarlı bölme, model başarısını verinin miktarından daha çok belirler."}},
+        {"@type":"Question","name":"Bankalar neden buluta değil de kendi altyapısında model eğitmeyi tercih eder?","acceptedAnswer":{"@type":"Answer","text":"Kredi verisi yoğun kişisel ve ticari sır içerir. KVKK, verinin kurum içinde ve amaçla sınırlı işlenmesini gerektirir; BDDK ise model riskinin yönetilmesini ve kararların açıklanabilir olmasını bekler. Kendi altyapısında (on-premise) yerel model eğitmek veya çalıştırmak, veriyi kurum dışına çıkarmadan bu beklentileri karşılamayı ve modeli bankanın kendi portföyüne göre kalibre etmeyi mümkün kılar."}},
+        {"@type":"Question","name":"Kredi modelinin açıklanabilir olması neden zorunlu?","acceptedAnswer":{"@type":"Answer","text":"BDDK model risk yönetimi ve açıklanabilirlik bekler; KVKK'nın 11. maddesi ilgili kişiye tamamen otomatik kararlara itiraz hakkı verir. Bu nedenle her kredi kararının hangi değişkenlere dayandığı gerekçelendirilebilmelidir. Pratikte skorlama modellerinde SHAP gibi tekniklerle 'red gerekçesi' üretilir; muhakeme katmanında ise cevaplar mevzuat maddesine atıfla verilir ve dayanağı olmayan bilgi uydurulmaz."}}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,550;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4EE; --paper-2:#EFEDE5; --surface:#FFFFFF;
+  --ink:#0E0E0C; --ink-2:#2A2924; --muted:#6B6962; --subtle:#97948B;
+  --line:rgba(14,14,12,.08); --line-strong:rgba(14,14,12,.16);
+  --accent:#2F5D4B; --accent-ink:#1B3A2E; --accent-tint:#E6EEE9;
+  --amber:#C99840; --amber-tint:#F6ECD8;
+  --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink-2);font-family:var(--body);font-size:16px;line-height:1.72;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(14,14,12,.028) 1px,transparent 1px);background-size:26px 26px}
+::selection{background:var(--accent);color:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--accent);font-weight:500}
+
+/* masthead */
+.microbar{border-bottom:1px solid var(--line)}
+.microbar .wrap{display:flex;justify-content:space-between;gap:16px;padding:9px 32px;
+  font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--subtle)}
+.microbar b{color:var(--accent);font-weight:500}
+nav.masthead{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);
+  -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+nav.masthead .wrap{display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.wordmark{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
+.wordmark i{font-style:italic;font-weight:400;color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
+.navlinks a{color:var(--ink-2)}
+.navlinks a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:8px;border:1px solid var(--ink);transition:all .2s}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+
+/* article hero */
+.arthero{border-top:1px solid var(--line-strong);padding:56px 0 40px}
+.arthero .wrap{max-width:820px}
+.crumb{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle);margin-bottom:22px}
+.crumb a:hover{color:var(--accent)}
+h1{font-family:var(--display);font-weight:550;font-size:clamp(34px,5vw,58px);line-height:1.03;letter-spacing:-.02em;color:var(--ink);margin-bottom:22px}
+.artlede{font-size:19px;line-height:1.6;color:var(--ink-2);font-family:var(--display);font-weight:400;font-style:italic}
+.artmeta{display:flex;gap:20px;flex-wrap:wrap;align-items:center;margin-top:26px;padding-top:20px;border-top:1px solid var(--line);
+  font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--muted)}
+.artmeta .dot{width:4px;height:4px;border-radius:50%;background:var(--subtle)}
+
+/* article body */
+article{padding:8px 0 40px}
+article .wrap{max-width:720px}
+article h2{font-family:var(--display);font-weight:550;font-size:clamp(25px,3.4vw,34px);line-height:1.12;letter-spacing:-.015em;color:var(--ink);
+  margin:52px 0 18px;padding-top:26px;border-top:1px solid var(--line)}
+article h2 .sn{font-family:var(--mono);font-size:12px;font-weight:400;letter-spacing:.12em;color:var(--accent);display:block;margin-bottom:12px;-webkit-text-fill-color:initial}
+article h3{font-family:var(--display);font-weight:550;font-size:21px;color:var(--ink);margin:34px 0 10px}
+article p{margin:0 0 18px}
+article p a{color:var(--accent-ink);border-bottom:1px solid var(--accent-tint);transition:border-color .2s}
+article p a:hover{border-color:var(--accent)}
+article strong{color:var(--ink);font-weight:600}
+article .lead::first-letter{font-family:var(--display);font-weight:700;font-size:66px;line-height:.72;float:left;margin:8px 12px 0 0;color:var(--accent)}
+article ul,article ol{margin:0 0 20px;padding-left:0;list-style:none}
+article li{position:relative;padding-left:26px;margin-bottom:11px}
+article ul li::before{content:"";position:absolute;left:2px;top:11px;width:6px;height:6px;border:1.5px solid var(--accent);border-radius:50%}
+article ol{counter-reset:li}
+article ol li{counter-increment:li}
+article ol li::before{content:counter(li);position:absolute;left:0;top:0;font-family:var(--mono);font-size:12px;color:var(--accent);font-weight:500}
+
+/* callout / pull quote break-out */
+.callout{background:var(--surface);border:1px solid var(--line-strong);border-left:3px solid var(--accent);border-radius:10px;padding:20px 24px;margin:26px 0}
+.callout .lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+.callout p{margin:0;font-size:15px;color:var(--ink-2)}
+.pull{margin:38px 0;font-family:var(--display);font-weight:400;font-style:italic;font-size:26px;line-height:1.32;color:var(--ink);
+  padding-left:22px;border-left:2px solid var(--accent)}
+
+/* data table break-out */
+.tablewrap{margin:30px 0;overflow-x:auto;border:1px solid var(--line-strong);border-radius:10px}
+table.dt{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface);min-width:560px}
+table.dt th,table.dt td{text-align:left;padding:13px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+table.dt thead th{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);background:var(--paper-2)}
+table.dt tbody tr:last-child td{border-bottom:0}
+table.dt td strong{color:var(--ink)}
+table.dt .kw{font-family:var(--mono);font-size:12px;color:var(--accent-ink);white-space:nowrap}
+
+.figcap{font-family:var(--mono);font-size:11px;letter-spacing:.04em;color:var(--subtle);margin:-18px 0 30px;text-align:center}
+
+/* sources */
+.sources{margin-top:20px;padding-top:24px;border-top:1px solid var(--line-strong)}
+.sources h2{border:0;padding:0;margin:0 0 16px;font-size:20px}
+.sources ol{padding-left:0}
+.sources li{font-size:13px;color:var(--muted);line-height:1.55;padding-left:26px}
+.sources li a{color:var(--accent-ink);border-bottom:1px solid var(--accent-tint);word-break:break-word}
+.disc{font-family:var(--mono);font-size:11px;line-height:1.7;color:var(--subtle);margin-top:24px;padding:16px 18px;background:var(--paper-2);border-radius:8px}
+
+/* CTA band */
+.cta-band{background:var(--ink);color:var(--paper);padding:66px 0;margin-top:20px}
+.cta-band .wrap{max-width:820px;display:grid;grid-template-columns:1.4fr 1fr;gap:48px;align-items:center}
+.cta-band .eyebrow{color:rgba(246,244,238,.5)}
+.cta-band h2{font-family:var(--display);font-weight:550;font-size:30px;line-height:1.1;color:var(--paper);margin:12px 0 0;letter-spacing:-.015em}
+.cta-band h2 em{font-style:italic;font-weight:400;color:#8FBCA8}
+.cta-band p{color:rgba(246,244,238,.7);font-size:14.5px;margin-top:12px}
+.cta-band .acts{display:flex;flex-direction:column;gap:10px;justify-self:end}
+.btn-paper{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.btn-paper:hover{background:#fff}
+.btn-outline-p{background:transparent;color:var(--paper);border-color:rgba(246,244,238,.3)}
+.btn-outline-p:hover{border-color:var(--paper)}
+
+footer{padding:34px 0 46px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;align-items:baseline;max-width:1240px}
+footer .fm{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)}
+footer .links{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+footer .links a:hover{color:var(--ink)}
+
+@media(max-width:820px){
+  .cta-band .wrap{grid-template-columns:1fr;gap:28px}
+  .cta-band .acts{justify-self:start}
+  .navlinks a:not(.btn){display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="microbar">
+  <div class="wrap">
+    <span>Analiz · Bankacılık &amp; Yapay Zeka</span>
+    <span>İstanbul · <b>KVKK uyumlu</b> · Yerel model</span>
+  </div>
+</div>
+
+<nav class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="./index.html">finhouse<i>.ai</i></a>
+    <div class="navlinks">
+      <a href="./index.html#cozumler">Çözümler</a>
+      <a href="./sectors/banking.html">Bankacılık</a>
+      <a href="./aiwatch.html">AIWATCH</a>
+      <a href="./blog.html">Blog</a>
+      <a class="btn btn-ink" href="./demo.html">Demo talep et <span class="arr">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<header class="arthero">
+  <div class="wrap">
+    <div class="crumb"><a href="./blog.html">Blog</a> &nbsp;/&nbsp; Bankacılık &nbsp;/&nbsp; Kredi &amp; Yapay Zeka</div>
+    <h1>Kredi tahsisinde yapay zeka ve kendi modelini eğitmek</h1>
+    <p class="artlede">Skorkarttan öğrenen modele geçiş, bankanın kendi portföyüne göre kalibre edilen
+       bir kredi zekâsını gerektiriyor. Bu yazıda kredi yaşam döngüsünde yapay zekânın değer kattığı yerleri,
+       kendi modelinizi eğitmek için veri kaynakları haritasını ve BDDK, TFRS 9 ile KVKK çerçevesinde
+       açıklanabilirlik gereksinimini pratik biçimde ele alıyoruz.</p>
+    <div class="artmeta">
+      <span>5 Temmuz 2026</span><span class="dot"></span>
+      <span>FinHouse.ai</span><span class="dot"></span>
+      <span>~12 dk okuma</span>
+    </div>
+  </div>
+</header>
+
+<article>
+  <div class="wrap">
+
+    <p class="lead">Kredi tahsisi, bankacılığın en eski ve en veri-yoğun kararıdır. Onlarca yıl boyunca bu
+      karar, uzman yargısıyla beslenen kural tablolarına — puanlama kartlarına (scorecard) — dayandı.
+      Bugün ise makine öğrenmesi modelleri, aynı kararı çok daha fazla değişkeni aynı anda tartarak veriyor.
+      Ancak asıl fark tekniğin gücünde değil; <strong>modelin kimin verisiyle, hangi amaçla ve ne kadar
+      açıklanabilir biçimde eğitildiğinde</strong>. Bir bankanın kredi zekâsı, ancak kendi portföyünün
+      davranışını öğrendiğinde gerçek değer üretir — ve bu, veri kaynaklarını doğru kurmakla başlar.</p>
+
+    <p>Bu yazı iki soruyu birlikte yanıtlıyor: <strong>Kredi tahsis süreçlerinde yapay zeka nerede
+      ve nasıl değer katar?</strong> ve <strong>bu değeri kalıcı kılmak için kendi modelinizi eğitirken
+      hangi veri kaynaklarına, hangi sırayla ihtiyacınız olur?</strong> Türkiye'deki düzenleyici çerçeveyi
+      (BDDK, TFRS 9, KVKK) merkeze alıyor; teoriyi değil, kurulabilir bir mimariyi anlatıyoruz.</p>
+
+    <h2><span class="sn">01 · Zeminde ne değişti</span>Kural tablosundan öğrenen modele</h2>
+
+    <p>Klasik kredi skorlaması, çoğunlukla lojistik regresyon temelli puanlama kartlarıyla yürür:
+      birkaç düzine değişken, ağırlıklandırılır, bir kesim skoruna göre onay/ret verilir. Bu yaklaşımın
+      erdemi şeffaflığıdır — her değişkenin katkısı görülebilir. Sınırı ise, değişkenler arası doğrusal
+      olmayan ilişkileri ve etkileşimleri yakalayamamasıdır.</p>
+
+    <p>Gradyan artırmalı ağaçlar (XGBoost, LightGBM gibi) ve sinir ağları bu sınırı aşar: yüzlerce değişkeni
+      ve aralarındaki karmaşık örüntüleri öğrenirler. Ayrım gücü (Gini/AUC) genellikle yükselir. Bunun
+      bedeli, kararın neden verildiğini açıklamanın zorlaşmasıdır — literatürde "kara kutu" sorunu.
+      Düzenleyiciler tam da bu noktaya odaklanıyor: BDDK'nın 2025 sonrası gündeminde
+      <a href="https://www.procompliance.net/bddknin-yeni-donem-duzenleyici-gundemi-2025-faaliyet-raporu-ve-2025-2028-stratejik-plan-isiginda-bir-degerlendirme/" target="_blank" rel="noopener">algoritmik önyargı, model riski ve açıklanabilirlik</a>
+      açıkça yeni risk alanları olarak tanımlanıyor.</p>
+
+    <div class="callout">
+      <div class="lab">Özetle</div>
+      <p>Daha güçlü model = daha iyi ayrım gücü, ama daha zor açıklanabilirlik. Doğru kurgu, ikisini karşı
+        karşıya koymak değil; <strong>ayrım gücünü yüksek tutarken kararı gerekçelendirilebilir tutmaktır.</strong></p>
+    </div>
+
+    <h2><span class="sn">02 · Değer haritası</span>Kredi yaşam döngüsünde yapay zeka nerede kazandırır</h2>
+
+    <p>Yapay zekânın kredideki değeri tek bir "onay/ret" anına sıkışmaz; kredinin bütün yaşam döngüsüne
+      yayılır. BDDK'nın <a href="https://www.bddk.org.tr/Mevzuat/DokumanGetir/1041" target="_blank" rel="noopener">Kredi Tahsis ve İzleme Süreçlerine İlişkin Rehberi</a>
+      de kredinin tahsisinden canlı izlemesine kadar tüm ömrünü kapsayan bir risk yönetimi bekler.
+      Değerin dört durağı:</p>
+
+    <ul>
+      <li><strong>Tahsis.</strong> Temerrüt olasılığının (PD) tahmini, başvuru evrakının otomatik denetimi,
+        mali oran analizi ve dosyanın mevzuata uygunluk kontrolü. Karar hızlanır, tutarlılık artar.</li>
+      <li><strong>İzleme ve erken uyarı.</strong> Canlı kredilerde davranışsal sinyallerden (hesap hareketi
+        düzensizliği, sektörel bozulma, gecikme örüntüsü) temerrüt öncesi uyarı üretmek. Rehberin en çok
+        vurguladığı alanlardan biri budur.</li>
+      <li><strong>Karşılık hesabı.</strong> <a href="https://www.bddk.org.tr/Mevzuat/DokumanGetir/943" target="_blank" rel="noopener">TFRS 9 kapsamında beklenen kredi zararı</a>
+        (BKZ) — 1 Ocak 2018'den beri zorunlu — PD, temerrüt halinde kayıp (LGD) ve temerrüt anındaki risk
+        tutarı (EAD) parametrelerine dayanır. Bu parametrelerin her biri kendi başına bir tahmin modelidir.</li>
+      <li><strong>Tahsilat.</strong> Sorunlu kredilerde hangi dosyaya hangi tahsilat aksiyonunun ne zaman
+        uygulanacağını önceliklendirmek — kazanılabilir tutarı büyütür.</li>
+    </ul>
+
+    <p class="pull">Nihai kredi kararı hiçbir aşamada modele devredilmez; model hazırlar, komite karar verir.</p>
+
+    <h2><span class="sn">03 · Neden kendi modeliniz</span>Portföyünüzü, kimse sizin kadar tanımıyor</h2>
+
+    <p>Hazır bir kredi skoru — örneğin bir kredi bürosu notu — değerli bir girdidir, ama tek başına
+      bankanın kararını veremez. Çünkü her portföyün risk davranışı farklıdır: bir KOBİ bankasının
+      müşteri tabanıyla bir tüketici finansmanı şirketininki aynı değildir. <strong>Kendi modelini
+      eğitmek</strong>, tam da bu farkı öğrenmektir — modeli sizin gerçekleşmiş temerrütlerinizle,
+      sizin sektör dağılımınızla, sizin teminat yapınızla kalibre etmek.</p>
+
+    <p>İkinci ve Türkiye özelinde belirleyici neden, veri egemenliğidir. Kredi verisi yoğun kişisel ve
+      ticari sır taşır. <a href="https://www.kvkk.gov.tr/Icerik/2037/Acik-Riza-Alirken-Dikkat-Edilecek-Hususlar" target="_blank" rel="noopener">KVKK</a>
+      verinin amaçla sınırlı ve kurum içinde işlenmesini; BDDK ise model riskinin yönetilmesini bekler.
+      Modeli kurumun kendi altyapısında (on-premise) eğitmek ve çalıştırmak, veriyi kurum dışına
+      çıkarmadan bu beklentileri karşılamayı mümkün kılar. Büyük dil modeli (LLM) tarafında da tablo
+      aynı: kişisel veri içeren muhakeme, buluta gönderilmek yerine kurum içindeki yerel modelde yapılabilir.</p>
+
+    <div class="callout">
+      <div class="lab">Ayrım</div>
+      <p>"Kendi modelini eğitmek" iki ayrı katmanı kapsar: <strong>(a) nicel skorlama modeli</strong> —
+        bankanın kendi veri bilimi ekibinin PD/LGD/EAD için eğittiği istatistiksel/ML model; ve
+        <strong>(b) muhakeme katmanı</strong> — dosyayı değerlendiren, mevzuata atıfla gerekçe üreten
+        yerel LLM. İkisi farklı veriyle beslenir, birlikte çalışır.</p>
+    </div>
+
+    <h2><span class="sn">04 · İşin özü</span>Veri kaynakları haritası</h2>
+
+    <p>Model kalitesini belirleyen, algoritmadan çok veridir. Türkiye'de bir kredi modelini beslerken beş
+      ana kaynak grubuyla çalışırsınız. Her birinin erişim yolu, güncellik ihtiyacı ve mahremiyet
+      hassasiyeti farklıdır:</p>
+
+    <div class="tablewrap">
+      <table class="dt">
+        <thead>
+          <tr><th>Kaynak grubu</th><th>İçerik</th><th>Modeldeki rolü</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>İç veri</strong><br><span class="kw">core / CRM</span></td>
+            <td>Başvuru formu, hesap hareketleri, ödeme performansı, mevcut limit/risk, teminat, geçmiş kredi davranışı.</td>
+            <td>Modelin bel kemiği. Temerrüt etiketi ve davranışsal değişkenler buradan gelir; portföye özgü öğrenme bunu gerektirir.</td>
+          </tr>
+          <tr>
+            <td><strong>Kredi bürosu</strong><br><span class="kw">KKB / Findeks</span></td>
+            <td>Bireysel ve <a href="https://www.kkb.com.tr/urunler/ticari-kredi-notu" target="_blank" rel="noopener">Ticari Kredi Notu</a>, sistemdeki toplam limit/risk, bildirimde bulunan kuruluş sayısı, gecikme ve takip bilgileri.</td>
+            <td>Bankalar arası görünürlük. Müşterinin sizde görünmeyen borçluluğunu ve ödeme geçmişini ekler.</td>
+          </tr>
+          <tr>
+            <td><strong>Mali tablo &amp; ekstre</strong><br><span class="kw">PDF / Excel</span></td>
+            <td>Bilanço, gelir tablosu, banka ekstreleri; oran analizi (borç/özkaynak, cari, faiz karşılama).</td>
+            <td>Özellikle ticari kredide temel. Ekstre ve tablo, geleceğe dönük nakit akışı sinyali taşır.</td>
+          </tr>
+          <tr>
+            <td><strong>Makro &amp; açık veri</strong><br><span class="kw">TCMB EVDS · TÜİK</span></td>
+            <td>Faiz, kur, enflasyon, sektörel büyüme, işsizlik; il/sektör bazlı göstergeler.</td>
+            <td>Senaryo ve TFRS 9 ileriye dönük (forward-looking) bilgi katmanı; makro koşulu modele taşır.</td>
+          </tr>
+          <tr>
+            <td><strong>Mevzuat verisi</strong><br><span class="kw">5411 · BDDK · RG</span></td>
+            <td>Bankacılık Kanunu, BDDK rehber ve tebliğleri, Resmî Gazete; bankanın kendi kredi politikası.</td>
+            <td>Muhakeme katmanının bilgi tabanı (RAG). Cevapların madde atıflı ve dayanaklı olmasını sağlar.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="figcap">Tablo 1 — Kredi modeli için beş veri kaynağı grubu ve modeldeki rolleri.</p>
+
+    <h3>İç veri: modelin bel kemiği</h3>
+    <p>En değerli veri, bankanın kendi çekirdek sistemlerindedir. Başvuru anındaki statik bilgi kadar,
+      hesabın zaman içindeki davranışı — maaş girişi düzeni, bakiye oynaklığı, kart kullanımı, geçmiş
+      kredilerin ödeme takvimi — güçlü öngörücülerdir. Kritik nokta: bu değişkenlerin <strong>başvuru
+      anında</strong> mevcut olması gerekir; sonradan oluşan bilgiyi modele koymak, ilerideki bölümde
+      değineceğimiz "veri sızıntısı" hatasını doğurur.</p>
+
+    <h3>Kredi bürosu: bankalar arası görünürlük</h3>
+    <p>1995'te dokuz bankanın ortaklığıyla kurulan <a href="https://www.kkb.com.tr/" target="_blank" rel="noopener">Kredi Kayıt Bürosu (KKB)</a>
+      ve tüketiciye dönük yüzü Findeks, müşterinin tüm sistemdeki kredi davranışını görünür kılar.
+      Bireysel Kredi Notu istatistiksel bir karar destek ürünüdür; Ticari Kredi Notu ise firmanın
+      önümüzdeki 12 ayda geri ödeme performansını tahmin eden bir risk puanıdır. Bu veriyi <em>bir girdi
+      değişkeni</em> olarak kullanmak güçlüdür — ama modelin tamamını dışarıdan bir skora bağlamak,
+      portföye özgü öğrenmeyi feda eder.</p>
+
+    <h3>Mali tablo ve ekstre: ticari kredinin kalbi</h3>
+    <p>Ticari kredide karar, büyük ölçüde mali tabloların ve banka ekstrelerinin okunmasıyla verilir.
+      Bu belgeler çoğunlukla PDF ve Excel olarak, standart olmayan biçimlerde gelir; doküman zekâsı (IDP)
+      ile yapılandırılmış veriye çevrilmeleri, oran analizinin ve modele girdinin ön koşuludur. Ekstre
+      ayrıştırma, taranmış belgelerde OCR ve tutarlılık kontrolü (örneğin bakiye devri denetimi) gerektirir.</p>
+
+    <h3>Makro ve açık veri: ileriye dönük katman</h3>
+    <p>TFRS 9, karşılık hesabının yalnız geçmişe değil, makul ve desteklenebilir ileriye dönük bilgiye de
+      dayanmasını ister. TCMB'nin EVDS sistemi (faiz, kur, enflasyon serileri) ve TÜİK göstergeleri, hem
+      bu forward-looking katmanı hem de senaryo analizini besler. Bu veriler kişisel veri içermez; buluttan
+      serbestçe alınabilir.</p>
+
+    <h3>Mevzuat verisi: muhakemenin dayanağı</h3>
+    <p>Muhakeme katmanı (LLM) için bilgi tabanı, bankacılık mevzuatının kendisidir: 5411 sayılı Bankacılık
+      Kanunu, BDDK'nın kredi tahsis ve izleme rehberleri, karşılıklar yönetmeliği ve bankanın kendi kredi
+      politikası. Bu belgeler bir <strong>RAG kasasına</strong> (getirmeli üretim / retrieval-augmented
+      generation) yüklenir; böylece model cevabı ezberden değil, ilgili maddeyi getirip ona atıfla üretir —
+      ve dayanağı olmayan bilgiyi uydurmak yerine bilmediğini söyler.</p>
+
+    <h2><span class="sn">05 · Görünmeyen iş</span>Veriyi modele hazırlamak</h2>
+
+    <p>Veri kaynaklarını toplamak yarı yoldur; modelin gerçekten öğrenmesi, verinin doğru hazırlanmasına
+      bağlıdır. En sık hata yapılan dört başlık:</p>
+
+    <ol>
+      <li><strong>Temerrüt etiketinin tanımı.</strong> Model neyi tahmin ediyor? "Temerrüt" tanımı (ör. 90+
+        gün gecikme) mevzuatla ve bankanın politikasıyla tutarlı, sabit bir tanım olmalıdır. Etiket kayarsa
+        model anlamsızlaşır.</li>
+      <li><strong>Zaman-tutarlı bölme.</strong> Eğitim/test ayrımı rastgele değil, zaman ekseninde yapılmalı:
+        geçmiş dönemle eğit, sonraki dönemle test et. Aksi halde model geleceği "görmüş" gibi görünür,
+        gerçek performansı abartılır.</li>
+      <li><strong>Veri sızıntısı (leakage).</strong> Karar anında henüz var olmayan bir bilgiyi girdiye
+        koymak (ör. kredinin açıldıktan sonraki hareketleri), laboratuvarda mükemmel ama sahada işe yaramayan
+        model üretir. Her değişken "başvuru anında biliniyor muydu?" testinden geçmelidir.</li>
+      <li><strong>Sınıf dengesizliği ve kalite.</strong> Temerrüt oranı düşüktür; azınlık sınıfı doğru
+        ele alınmazsa model "herkes öder" demeyi öğrenir. Eksik/hatalı veri, tekrarlanan kayıtlar ve
+        tutarsız kodlamalar temizlenmeden hiçbir algoritma kurtarmaz.</li>
+    </ol>
+
+    <div class="callout">
+      <div class="lab">Kural</div>
+      <p>Model başarısını verinin <strong>miktarı</strong> değil, etiketin doğruluğu, zamanın tutarlılığı ve
+        sızıntının olmaması belirler. Az ama temiz veri, çok ama kirli veriyi neredeyse her zaman yener.</p>
+    </div>
+
+    <h2><span class="sn">06 · Mimari</span>İki katman: skorlama + muhakeme</h2>
+
+    <p>Pratikte en sağlam kurgu, tek bir dev model değil, iki katmanın iş bölümüdür:</p>
+    <ul>
+      <li><strong>Nicel skorlama katmanı.</strong> Yapılandırılmış veriyle (iç veri, büro, oranlar, makro)
+        eğitilen PD/LGD/EAD modelleri. Sayısal, kalibre, geriye dönük test edilebilir. Bankanın veri bilimi
+        ekibinin sahasıdır.</li>
+      <li><strong>Muhakeme katmanı.</strong> Yerel bir LLM, dosyayı ve mevzuat kasasını okuyarak nitel
+        değerlendirme yapar: oran analizini yorumlar, mevzuat uygunluk kontrol listesini çalıştırır, kredi
+        komitesine karar öneri notu taslağı hazırlar. Skorun "neden"ini insan diline çevirir.</li>
+    </ul>
+    <p>Bu iki katman birbirini denetler: skor sayıyı verir, muhakeme katmanı bağlamı ve gerekçeyi. İkisinin
+      üstünde ise her zaman insan onayı (human-in-the-loop) durur.</p>
+
+    <h2><span class="sn">07 · Sınır</span>Açıklanabilirlik ve mevzuat</h2>
+
+    <p>Türkiye'de bir kredi modelinin teknik başarısı, açıklanabilirliğinden ayrı düşünülemez. İki
+      düzenleme bunu doğrudan şekillendirir:</p>
+
+    <ul>
+      <li><strong>KVKK — otomatik karara itiraz.</strong> 6698 sayılı Kanun'un 11. maddesi, ilgili kişiye
+        "münhasıran otomatik sistemlerle analiz edilmesi suretiyle aleyhine bir sonucun ortaya çıkmasına
+        itiraz etme" hakkı tanır. Yani tümüyle otomatik verilen olumsuz bir kredi kararının gerekçesi
+        gösterilebilmeli ve itiraza açık olmalıdır. (GDPR'ın 22. maddesi bunu daha da ileri götürüp kural
+        olarak yasaklar; Türkiye'de rejim "itiraz hakkı" biçimindedir.)</li>
+      <li><strong>BDDK — model risk yönetimi.</strong> İç sistemler ve İSEDES çerçevesi, modelin
+        doğrulanmasını (validation), izlenmesini, drift takibini ve kararların açıklanabilirliğini bekler.
+        2025-2028 stratejik planı yapay zeka kullanımına ilişkin usul ve esasların belirleneceğini işaret
+        ediyor.</li>
+    </ul>
+
+    <p>Pratik karşılığı: skorlama modellerinde SHAP gibi tekniklerle her karar için "red gerekçesi"
+      (reason code) üretmek; muhakeme katmanında ise cevabı mevzuat maddesine atıfla vermek ve dayanağı
+      olmayan bilgiyi uydurmamak. Uluslararası düzenleyiciler de aynı yönde: ABD'de CFPB, karmaşık kredi
+      modellerinin her ret için <a href="https://finreglab.org/research/explainability-fairness-in-machine-learning-for-credit-underwriting-policy-analysis/" target="_blank" rel="noopener">bireyselleştirilmiş, spesifik gerekçe</a>
+      üretmesini şart koşuyor.</p>
+
+    <h2><span class="sn">08 · Uygulama</span>FinHouse yaklaşımı</h2>
+
+    <p>Bu çerçeveyi biz FinHouse.ai'da somut bir kurguya bağladık — abartısız anlatalım. Kredi Tahsis
+      Asistanımız, muhakeme katmanını hedefler ve şunları yapar:</p>
+    <ul>
+      <li><strong>Mevzuat kasası (RAG).</strong> 5411 sayılı Kanun ve BDDK Kredi Tahsis ve İzleme Rehberi
+        başta olmak üzere yalnız resmî kaynaklardan oluşan bir bilgi tabanı; cevaplar madde atıflı gelir,
+        getirilen parçada olmayan bilgi uydurulmaz.</li>
+      <li><strong>Ekstre ve mali tablo okuma.</strong> Banka ekstresi ayrıştırma canlı olarak çalışır;
+        yüklenen tablodan oran analizi ve mevzuat kontrol listesi üretilir.</li>
+      <li><strong>Karar öneri notu.</strong> Ajan, kredi komitesine bir <em>öneri notu taslağı</em> hazırlar
+        — nihai kararı vermez. Bankanın kendi kredi politikası ajanın davranışına işlenir.</li>
+      <li><strong>Yerel çalışma.</strong> Tüm akış kurum içindeki yerel modelde işlenir; müşteri verisi
+        buluta çıkmaz. Nicel skorlama modeli tarafında ise bankanın veri bilimi ekibiyle çalışırız — modeli
+        biz "kutudan" dayatmayız, sizin verinizle sizin sahanızda kurulur.</li>
+    </ul>
+
+    <p>Kısacası: yapay zeka kredi tahsisinde gerçek değeri, ancak <strong>bankanın kendi verisiyle
+      kalibre edilmiş, açıklanabilir ve insan onayına bağlı</strong> olduğunda üretir. Veri kaynaklarını
+      doğru kurmak, bu değerin ön koşuludur — ve tam da bu yüzden işe modelden değil, veriden başlanır.</p>
+
+    <div class="sources">
+      <h2>Kaynaklar</h2>
+      <ol>
+        <li>BDDK — <a href="https://www.bddk.org.tr/Mevzuat/DokumanGetir/1041" target="_blank" rel="noopener">Kredi Tahsis ve İzleme Süreçlerine İlişkin Rehber (9644 İyi Uygulama Rehberi)</a>, 29.06.2021.</li>
+        <li>BDDK — <a href="https://www.bddk.org.tr/Mevzuat/DokumanGetir/943" target="_blank" rel="noopener">TFRS 9 Uyarınca Beklenen Kredi Zararı Karşılığı</a> ve Kredilerin Sınıflandırılması ve Karşılıklara İlişkin Usul ve Esaslar Hakkında Yönetmelik.</li>
+        <li>ProCompliance — <a href="https://www.procompliance.net/bddknin-yeni-donem-duzenleyici-gundemi-2025-faaliyet-raporu-ve-2025-2028-stratejik-plan-isiginda-bir-degerlendirme/" target="_blank" rel="noopener">BDDK'nın 2025 Faaliyet Raporu ve 2025-2028 Stratejik Plan Değerlendirmesi</a> (yapay zeka, model riski, açıklanabilirlik).</li>
+        <li>KKB — <a href="https://www.kkb.com.tr/urunler" target="_blank" rel="noopener">Ürünler</a> ve <a href="https://www.kkb.com.tr/urunler/ticari-kredi-notu" target="_blank" rel="noopener">Ticari Kredi Notu</a>.</li>
+        <li>KVKK — <a href="https://www.kvkk.gov.tr/Icerik/2037/Acik-Riza-Alirken-Dikkat-Edilecek-Hususlar" target="_blank" rel="noopener">Açık Rıza Alırken Dikkat Edilecek Hususlar</a>; 6698 sayılı Kanun md. 11.</li>
+        <li>FinRegLab — <a href="https://finreglab.org/research/explainability-fairness-in-machine-learning-for-credit-underwriting-policy-analysis/" target="_blank" rel="noopener">Explainability &amp; Fairness in Machine Learning for Credit Underwriting</a>.</li>
+      </ol>
+      <p class="disc">Bu yazı genel bilgilendirme amaçlıdır; hukuki veya düzenleyici görüş yerine geçmez.
+        Mevzuat atıfları yayın tarihindeki (5 Temmuz 2026) düzenlemelere dayanır; güncel metin için resmî
+        kaynaklar esas alınmalıdır.</p>
+    </div>
+
+  </div>
+</article>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Bankacılık · Canlı demo</div>
+      <h2>Kredi Tahsis Asistanı'nı <em>kendi mevzuatınızla</em> görün.</h2>
+      <p>Mevzuat kasası, ekstre analizi ve karar öneri notu taslağı — hepsi yerel modelde, veriniz kurum
+        dışına çıkmadan. Bir saatlik demoda kendi senaryonuzla deneyelim.</p>
+    </div>
+    <div class="acts">
+      <a class="btn btn-paper" href="./demo.html">Demo talep et <span class="arr">→</span></a>
+      <a class="btn btn-outline-p" href="./sectors/banking.html">Bankacılık çözümleri</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span class="fm">© <span id="y"></span> FinHouse.ai — Finansal Yapay Zeka Çözümleri Evi</span>
+    <div class="links">
+      <a href="https://app.finhouse.ai" target="_blank" rel="noopener">FirmaAI</a>
+      <a href="./aiwatch.html">AIWATCH</a>
+      <a href="./blog.html">Blog</a>
+      <a href="mailto:info@finhouse.ai">info@finhouse.ai</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent = new Date().getFullYear();</script>
+</body>
+</html>
