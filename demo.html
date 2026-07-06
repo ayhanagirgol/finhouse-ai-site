@@ -69,9 +69,8 @@
 
         <div class="card" style="margin-top:14px;">
           <div class="card-body">
-            <form name="demo" id="demoForm" class="form" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-              <input type="hidden" name="form-name" value="demo">
-              <p style="display:none;">
+            <form name="demo" id="demoForm" class="form" method="POST" action="/api/demo-request">
+              <p style="display:none;" aria-hidden="true">
                 <label>Don’t fill this out if you’re human: <input name="bot-field"></label>
               </p>
               <div class="form-grid">
@@ -261,8 +260,22 @@
       const payload = {};
       for (const [k,v] of fd.entries()) payload[k] = v;
 
+      const fallbackMail = () => {
+        const subject = encodeURIComponent(`Demo talebi - ${payload.company || payload.name || ""}`);
+        const lines = [
+          `Ad Soyad: ${payload.name || "-"}`,
+          `E-posta: ${payload.email || "-"}`,
+          `Şirket: ${payload.company || "-"}`,
+          `Sektör: ${payload.sector || "-"}`,
+          "", "Mesaj:", payload.message || "-",
+        ].join("\n");
+        const body = encodeURIComponent(lines);
+        if(statusEl){
+          statusEl.innerHTML = 'Gönderim yapılamadı. Lütfen <a href="mailto:info@finhouse.ai?subject='+subject+'&body='+body+'">info@finhouse.ai</a> adresine iletin.';
+        }
+      };
       try{
-        const r = await fetch("/.netlify/functions/demo-request", {
+        const r = await fetch("/api/demo-request", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(payload)
@@ -272,13 +285,9 @@
           window.location.href = "./thanks.html";
           return;
         }
-        if(statusEl) statusEl.textContent = "E-posta servisi yanıt vermedi; alternatif kanal deneniyor…";
-        form.removeEventListener('submit', handler);
-        form.submit();
+        fallbackMail();
       }catch(err){
-        if(statusEl) statusEl.textContent = "Bağlantı hatası; alternatif kanal deneniyor…";
-        form.removeEventListener('submit', handler);
-        form.submit();
+        fallbackMail();
       }
     }
 
