@@ -1,44 +1,24 @@
 (function(){
-  // Mobile UX: force light theme (avoid heavy dark typography on small screens)
-  function isMobileViewport(){
-    try{
-      return window.matchMedia && window.matchMedia("(max-width: 820px)").matches;
-    }catch(e){ return false; }
-  }
-
-const themeToggle = document.getElementById("themeToggle");
+  const themeToggle = document.getElementById("themeToggle");
   const themeLabel  = document.getElementById("themeLabel");
-  const brandLogo   = document.getElementById("brandLogo");
-  const footerLogo  = document.getElementById("footerLogo");
   const yearEl      = document.getElementById("y");
-
-  const LOGO_DARK  = "./assets/logo-white.png.jpg";
-  const LOGO_LIGHT = "./assets/logo-black.png.jpg";
 
   function setTheme(theme){
     document.documentElement.setAttribute("data-theme", theme);
     document.body.setAttribute("data-theme", theme);
-    const isDark = theme === "dark";
-    if (themeLabel) themeLabel.textContent = isDark ? "Koyu" : "Açık";
-    if (brandLogo) brandLogo.src = isDark ? LOGO_DARK : LOGO_LIGHT;
-    if (footerLogo) footerLogo.src = isDark ? LOGO_DARK : LOGO_LIGHT;
-    try{ localStorage.setItem("fh_theme", theme); }catch(e){}
+    if (themeLabel) themeLabel.textContent = theme === "dark" ? "Koyu" : "Açık";
+    try{ localStorage.setItem("fh-theme", theme); }catch(e){}
   }
 
-  const saved = (() => { try { return localStorage.getItem("fh_theme"); } catch(e){ return null; } })();
-  const mobile = isMobileViewport();
-  if (mobile) {
-    setTheme("light");
-  } else if (saved === "light" || saved === "dark") {
-    setTheme(saved);
-  } else {
-    setTheme("dark");
-  }
+  // FOUC head script already set html[data-theme]; sync label + persistence here.
+  const current = document.documentElement.getAttribute("data-theme")
+    || (() => { try { return localStorage.getItem("fh-theme"); } catch(e){ return null; } })()
+    || ((window.matchMedia && matchMedia("(prefers-color-scheme: dark)").matches) ? "dark" : "light");
+  setTheme(current);
 
   themeToggle?.addEventListener("click", () => {
-    if (isMobileViewport()) return;
-    const current = document.body.getAttribute("data-theme");
-    setTheme(current === "dark" ? "light" : "dark");
+    const cur = document.documentElement.getAttribute("data-theme") === "dark" ? "dark" : "light";
+    setTheme(cur === "dark" ? "light" : "dark");
   });
 
   // --- Accordions (auto-open where requested) ---
