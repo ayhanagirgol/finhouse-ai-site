@@ -1,114 +1,163 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Blog | FinHouse.ai</title>
-  <meta name="description" content="FinHouse.ai blog: finansal yapay zeka, agentic orchestration, enterprise automation ve güvenli AI mimarileri üzerine içgörüler." />
-  <link rel="canonical" href="https://finhouse.ai/blog.html" />
-  <meta name="robots" content="index,follow" />
-  <meta property="og:title" content="Blog | FinHouse.ai" />
-  <meta property="og:description" content="Finansal yapay zeka ve kurumsal otomasyon üzerine içgörüler." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://finhouse.ai/blog.html" />
-  <meta property="og:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg" />
-  <link rel="stylesheet" href="./styles.css?v=20260310-v62" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Blog | FinHouse.ai</title>
+<meta name="description" content="FinHouse.ai blog: finansal yapay zeka, kredi tahsisinde AI, agentic orchestration ve KVKK uyumlu kurumsal AI mimarileri üzerine uygulanabilir içgörüler.">
+<link rel="canonical" href="https://finhouse.ai/blog.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="FinHouse.ai">
+<meta property="og:title" content="Blog | FinHouse.ai">
+<meta property="og:description" content="Finansal yapay zeka ve kurumsal otomasyon üzerine içgörüler.">
+<meta property="og:url" content="https://finhouse.ai/blog.html">
+<meta property="og:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Blog | FinHouse.ai">
+<meta name="twitter:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg">
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,550;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F6F4EE; --paper-2:#EFEDE5; --surface:#FFFFFF;
+  --ink:#0E0E0C; --ink-2:#2A2924; --muted:#6B6962; --subtle:#97948B;
+  --line:rgba(14,14,12,.08); --line-strong:rgba(14,14,12,.16);
+  --accent:#2F5D4B; --accent-ink:#1B3A2E; --accent-tint:#E6EEE9;
+  --display:'Fraunces',Georgia,serif; --body:'Inter',system-ui,sans-serif; --mono:'JetBrains Mono',ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink-2);font-family:var(--body);font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  background-image:radial-gradient(rgba(14,14,12,.028) 1px,transparent 1px);background-size:26px 26px}
+::selection{background:var(--accent);color:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1000px;margin:0 auto;padding:0 32px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+.eyebrow b{color:var(--accent);font-weight:500}
+/* masthead */
+.microbar{border-bottom:1px solid var(--line)}
+.microbar .wrap{max-width:1240px;display:flex;justify-content:space-between;gap:16px;padding:9px 32px;font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--subtle)}
+.microbar b{color:var(--accent);font-weight:500}
+nav.masthead{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+nav.masthead .wrap{max-width:1240px;display:flex;align-items:center;justify-content:space-between;padding-top:16px;padding-bottom:16px}
+.wordmark{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
+.wordmark i{font-style:italic;font-weight:400;color:var(--accent)}
+.navlinks{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
+.navlinks a{color:var(--ink-2)}
+.navlinks a.active{color:var(--accent)}
+.navlinks a:hover{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:8px;border:1px solid var(--ink);transition:all .2s}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ink:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+.btn .arr{transition:transform .2s}
+.btn:hover .arr{transform:translateX(3px)}
+/* hero */
+.blog-hero{padding:64px 0 40px;border-top:1px solid var(--line-strong)}
+h1{font-family:var(--display);font-weight:550;font-size:clamp(40px,6vw,68px);line-height:1;letter-spacing:-.02em;color:var(--ink);margin:16px 0 18px}
+h1 em{font-style:italic;font-weight:400;color:var(--accent)}
+.blog-hero p{font-size:17px;color:var(--ink-2);max-width:56ch}
+/* posts index */
+.posts{border-top:1px solid var(--line-strong)}
+.posts a.post{display:grid;grid-template-columns:1fr auto;gap:12px 24px;align-items:baseline;padding:30px 6px;border-bottom:1px solid var(--line);transition:background .2s}
+.posts a.post:hover{background:var(--surface)}
+.post .meta{grid-column:1/-1;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:-4px}
+.post h2{font-family:var(--display);font-size:clamp(21px,2.6vw,27px);font-weight:550;letter-spacing:-.012em;color:var(--ink);line-height:1.12}
+.post p{grid-column:1/-1;font-size:14px;color:var(--muted);line-height:1.6;max-width:76ch}
+.post .go{font-family:var(--mono);font-size:20px;color:var(--subtle);transition:all .2s;align-self:center}
+.posts a.post:hover .go{color:var(--accent);transform:translateX(4px)}
+/* footer */
+footer{padding:40px 0 48px;border-top:2px solid var(--ink);margin-top:56px}
+footer .wrap{max-width:1240px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+footer .fm{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--subtle)}
+footer .links{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+footer .links a:hover{color:var(--ink)}
+@media(max-width:720px){.navlinks a:not(.btn){display:none}}
+</style>
 </head>
 <body>
-<header class="container">
-    <nav class="nav">
-      <a class="brand" href="./index.html" aria-label="FinHouse.ai">
-        <img id="brandLogo" class="brand-logo" src="./assets/logo-black.png.jpg" alt="FinHouse.ai" />
-        <span class="brand-text">finhouse.ai</span>
-      </a>
 
-      <div class="nav-links">
-        <a class="pill" href="./index.html#cozumler">Çözümler</a>
-        <a class="pill" href="./index.html#sektorler">Sektörler</a>
-        <a class="pill" href="./ai-marketplace.html">AI Marketplace</a>
-        <a class="pill" href="https://app.finhouse.ai" target="_blank" rel="noopener">FirmaAI</a>
-        <a class="pill" href="./blog.html">Blog</a>
-        <a class="pill primary" href="./demo.html">Demo</a>
+<div class="microbar">
+  <div class="wrap"><span>Finansal Yapay Zeka Çözümleri Evi</span><span>İstanbul · <b>KVKK uyumlu</b></span></div>
+</div>
 
-        <button id="themeToggle" class="pill" type="button" aria-label="Tema değiştir">
-          <span id="themeLabel">Koyu</span>
-        </button>
-      </div>
-    </nav>
+<nav class="masthead">
+  <div class="wrap">
+    <a class="wordmark" href="./index.html">finhouse<i>.ai</i></a>
+    <div class="navlinks">
+      <a href="./index.html#cozumler">Çözümler</a>
+      <a href="./index.html#sektorler">Sektörler</a>
+      <a href="./aiwatch.html">AIWATCH</a>
+      <a class="active" href="./blog.html">Blog</a>
+      <a class="btn btn-ink" href="./demo.html">Demo talep et <span class="arr">→</span></a>
+    </div>
+  </div>
+</nav>
+
+<main>
+  <header class="blog-hero">
+    <div class="wrap">
+      <div class="eyebrow"><b>Blog</b> · İçgörüler &amp; yayınlar</div>
+      <h1>Finansal yapay zekâ,<br/><em>uygulanabilir</em> içgörülerle.</h1>
+      <p>Kredi tahsisinden agentic otomasyona, KVKK uyumlu mimarilerden veri kaynaklarına — finans
+         kurumları için kısa, dayanaklı ve sahaya dönük içerikler.</p>
+    </div>
   </header>
 
-<main class="container">
-  <section class="hero2" style="margin-top: 18px;">
-    <div class="hero2-left">
-      <div class="kicker">Blog</div>
-      <h1 style="margin:6px 0 10px;">İçgörüler &amp; Yayınlar</h1>
-      <p class="muted" style="max-width: 72ch;">
-        Finansal yapay zeka, agentic orchestration ve kurumsal otomasyon üzerine kısa, uygulanabilir içerikler.
-      </p>
-    </div>
-    <div class="hero2-right" style="max-height: 220px; overflow: hidden;">
-      <img src="./assets/hero-finai.jpg" alt="FinHouse Blog" style="width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;" />
-    </div>
-  </section>
+  <section>
+    <div class="wrap">
+      <div class="posts">
+        <a class="post" href="./blog-kredi-tahsis-yapay-zeka.html">
+          <span class="meta">5 Tem 2026 · Bankacılık &amp; AI</span>
+          <h2>Kredi tahsisinde yapay zeka ve kendi modelini eğitmek</h2>
+          <span class="go">→</span>
+          <p>Kredi yaşam döngüsünde yapay zekânın değer kattığı yerler, kendi modelinizi eğitmek için
+             beş veri kaynağı haritası (KKB/Findeks, ekstre, TCMB, mevzuat) ve BDDK / TFRS 9 / KVKK
+             çerçevesinde açıklanabilirlik.</p>
+        </a>
 
-  <section style="margin-top: 18px;">
-    <div class="grid-2">
-      <a class="card" href="./blog-kredi-tahsis-yapay-zeka.html">
-        <div class="kicker">5 Tem 2026 • Bankacılık &amp; AI</div>
-        <h2 style="margin:6px 0 8px;">Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek</h2>
-        <p class="muted" style="margin:0;">
-          Kredi yaşam döngüsünde yapay zekânın değer kattığı yerler, kendi modelinizi eğitmek için veri kaynakları haritası ve BDDK/TFRS 9/KVKK çerçevesinde açıklanabilirlik.
-        </p>
-      </a>
+        <a class="post" href="./blog-firmaai.html">
+          <span class="meta">13 Nis 2026 · AI Platform</span>
+          <h2>FirmaAI: şirketlere özel kurumsal AI asistan</h2>
+          <span class="go">→</span>
+          <p>Mail yönetiminden görev takibine, öğrenen kişiselleştirmeden paylaşım ağına — şirketinize
+             özel, KVKK uyumlu kurumsal AI platformu.</p>
+        </a>
 
-      <a class="card" href="./blog-agentic-1.html">
-        <div class="kicker">10 Mar 2026 • Agentic AI</div>
-        <h2 style="margin:6px 0 8px;">Agentic Orchestration: Neden Orkestrasyon Katmanı Şart?</h2>
-        <p class="muted" style="margin:0;">
-          Ajanları süreçlere entegre etmek için orkestrasyon katmanı, guardrail ve denetim izi. 2026 raporundan pratik çıkarımlar.
-        </p>
-      </a>
+        <a class="post" href="./blog-agentic-2.html">
+          <span class="meta">10 Mar 2026 · Enterprise Automation</span>
+          <h2>Enterprise agentic automation: blueprint ve yol haritası</h2>
+          <span class="go">→</span>
+          <p>Kurumsal agentic otomasyon için güvenlik, governance ve ölçümleme odaklı blueprint;
+             finans kurumları için 30–60 günlük yol haritası.</p>
+        </a>
 
-      <a class="card" href="./blog-agentic-2.html">
-        <div class="kicker">10 Mar 2026 • Enterprise Automation</div>
-        <h2 style="margin:6px 0 8px;">Enterprise Agentic Automation: Blueprint ve Yol Haritası</h2>
-        <p class="muted" style="margin:0;">
-          Kurumsal agentic automation için güvenlik, governance ve ölçümleme odaklı blueprint. Finans kurumları için 30–60 gün yol haritası.
-        </p>
-      </a>
-
-      <a class="card" href="./blog-firmaai.html">
-        <div class="kicker">13 Nis 2026 • AI Platform</div>
-        <h2 style="margin:6px 0 8px;">FirmaAI: Şirketlere Özel Kurumsal AI Asistan</h2>
-        <p class="muted" style="margin:0;">
-          Mail yönetiminden görev takibine, adaptive learning'den paylaşım ağına — şirketinize özel AI asistan platformu.
-        </p>
-      </a>
+        <a class="post" href="./blog-agentic-1.html">
+          <span class="meta">10 Mar 2026 · Agentic AI</span>
+          <h2>Agentic orchestration: neden orkestrasyon katmanı şart?</h2>
+          <span class="go">→</span>
+          <p>Ajanları süreçlere entegre etmek için orkestrasyon katmanı, guardrail ve denetim izi —
+             2026 raporundan pratik çıkarımlar.</p>
+        </a>
+      </div>
     </div>
   </section>
 </main>
 
-<footer class="footer container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">FinHouse.ai</div>
-        <div class="muted">Finansal Yapay Zeka Çözümleri Evi</div>
-      </div>
-      <div>
-        <div class="footer-title">Sayfalar</div>
-        <a class="footer-link" href="./index.html#cozumler">Çözümler</a>
-        <a class="footer-link" href="./index.html#sektorler">Sektörler</a>
-        <a class="footer-link" href="./ai-marketplace.html">AI Marketplace</a>
-        <a class="footer-link" href="./blog.html">Blog</a>
-        <a class="footer-link" href="./demo.html">Demo</a>
-      </div>
-      <div>
-        <div class="footer-title">İletişim</div>
-        <a class="footer-link" href="mailto:info@finhouse.ai">info@finhouse.ai</a>
-      </div>
+<footer>
+  <div class="wrap">
+    <span class="fm">© <span id="y"></span> FinHouse.ai — Finansal Yapay Zeka Çözümleri Evi</span>
+    <div class="links">
+      <a href="https://app.finhouse.ai" target="_blank" rel="noopener">FirmaAI</a>
+      <a href="./aiwatch.html">AIWATCH</a>
+      <a href="./index.html#cozumler">Çözümler</a>
+      <a href="mailto:info@finhouse.ai">info@finhouse.ai</a>
     </div>
-    <div class="muted" style="margin-top: 14px;">© 2026 FinHouse.ai</div>
-  </footer>
-<script src="./app.js?v=20260310-v62"></script>
+  </div>
+</footer>
+
+<script>document.getElementById('y').textContent=new Date().getFullYear();</script>
 </body>
 </html>
