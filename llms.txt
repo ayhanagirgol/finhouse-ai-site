@@ -68,6 +68,11 @@ Hazır ürünlerin yanında kuruma özel danışmanlık ve geliştirme hizmeti v
 
 ## İçerik / Blog
 
+- [Neden Her Şirketin Bir Yapay Zekâ Yönetim Kuruluna İhtiyacı Var](https://finhouse.ai/blog-ai-yonetim-kurulu.html):
+  FirmaAI'ın kurucusunun kaleminden görüş yazısı — chatbot değil yönetim kurulu (C-level AI
+  danışmanları farklı bakış açılarını masaya getirir), konuşan değil iş yapan agentic ajanlar
+  (araç kullanan, HITL onaylı), veri egemenliği (yerel model/KVKK). "C-level'ın kaleminden"
+  içerik serisinin ilk yazısı.
 - [Loop Engineering: Prompt'tan Döngüye](https://finhouse.ai/blog-loop-engineering.html):
   Yapay zekâda mühendisliğin birimi tek prompt olmaktan çıkıp modeli çağıran döngüye kayıyor.
   Karpathy'nin prompt→context engineering soyağacından loop engineering'e; agentic döngünün
