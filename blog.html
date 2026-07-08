@@ -49,9 +49,9 @@ nav.masthead .wrap{max-width:1240px;display:flex;align-items:center;justify-cont
 .wordmark{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em;color:var(--ink)}
 .wordmark i{font-style:italic;font-weight:400;color:var(--accent)}
 .navlinks{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
-.navlinks a{color:var(--ink-2)}
+.navlinks a:not(.btn){color:var(--ink-2)}
 .navlinks a.active{color:var(--accent)}
-.navlinks a:hover{color:var(--accent)}
+.navlinks a:not(.btn):hover{color:var(--accent)}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:8px;border:1px solid var(--ink);transition:all .2s}
 .btn-ink{background:var(--ink);color:var(--paper)}
 .btn-ink:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
@@ -123,6 +123,15 @@ html[data-theme="dark"] .chip.amber{color:#E7C98A}
   <section>
     <div class="wrap">
       <div class="posts">
+        <a class="post" href="./blog-yapay-zeka-halusinasyon-sorumluluk.html">
+          <span class="meta">8 Tem 2026 · Uyum &amp; AI Act</span>
+          <h2>Yapay zekânın uydurduğu bilgilerden kim sorumlu?</h2>
+          <span class="go">→</span>
+          <p>Halüsinasyon artık yalnızca etik değil hukuki bir mesele. Sorumluluğun katmanları,
+             düzenlenen sektörlerde artan risk (KVKK, AI Act) ve halüsinasyonu tasarımdan azaltmanın
+             yolu — yerel AI, kaynak-temelli yanıt ve insan-döngüde onay.</p>
+        </a>
+
         <a class="post" href="./blog-kredi-tahsis-yapay-zeka.html">
           <span class="meta">5 Tem 2026 · Bankacılık &amp; AI</span>
           <h2>Kredi tahsisinde yapay zeka ve kendi modelini eğitmek</h2>

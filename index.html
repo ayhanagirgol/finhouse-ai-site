@@ -129,7 +129,7 @@ nav.masthead .wrap{display:flex;align-items:center;justify-content:space-between
 .wordmark{font-family:var(--display);font-weight:700;font-size:23px;letter-spacing:-.01em}
 .wordmark i{font-style:italic;font-weight:400;color:var(--accent)}
 .navlinks{display:flex;align-items:center;gap:26px;font-size:13.5px;font-weight:500}
-.navlinks a{position:relative;color:var(--ink-2)}
+.navlinks a:not(.btn){position:relative;color:var(--ink-2)}
 .navlinks a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1.5px;background:var(--accent);transition:width .25s}
 .navlinks a:not(.btn):hover::after{width:100%}
 .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:13.5px;padding:10px 20px;border-radius:8px;
