@@ -68,6 +68,13 @@ Hazır ürünlerin yanında kuruma özel danışmanlık ve geliştirme hizmeti v
 
 ## İçerik / Blog
 
+- [Loop Engineering: Prompt'tan Döngüye](https://finhouse.ai/blog-loop-engineering.html):
+  Yapay zekâda mühendisliğin birimi tek prompt olmaktan çıkıp modeli çağıran döngüye kayıyor.
+  Karpathy'nin prompt→context engineering soyağacından loop engineering'e; agentic döngünün
+  anatomisi (bağlam topla → model → aksiyon → gözlemle, çıktı N+1'in bağlamı olur); asıl neyi
+  mühendislik ederiz (bağlam kurulumu, araç tasarımı, durma koşulları, hata kurtarma, HITL);
+  başarısızlık modları (context rot/poisoning, sonsuz döngü, drift, maliyet); döngüyü ölçmek
+  (başarı oranı, adım sayısı, maliyet, insan-müdahale, kurtarma oranı).
 - [Kredi Tahsisinde Yapay Zeka ve Kendi Modelini Eğitmek: Veri Kaynakları Rehberi](https://finhouse.ai/blog-kredi-tahsis-yapay-zeka.html):
   Kredi yaşam döngüsünde yapay zekânın değer kattığı yerler (tahsis, izleme/erken uyarı,
   TFRS 9 beklenen kredi zararı, tahsilat); kendi modelini eğitmek için beş veri kaynağı grubu
