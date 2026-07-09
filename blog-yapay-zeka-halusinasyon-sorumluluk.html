@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<script>(function(){try{var t=localStorage.getItem('fh-theme')||((window.matchMedia&&matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light');document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <title>Yapay Zekânın Uydurduğu Bilgilerden Kim Sorumlu? | FinHouse.ai Blog</title>
+  <meta name="description" content="Yapay zeka halüsinasyonu artık yalnızca etik değil, hukuki bir mesele. Uydurma bilgiden sorumluluk kime ait, düzenlenen sektörlerde risk neden katlanır ve halüsinasyon tasarımdan nasıl azaltılır? KVKK ve AI Act çerçevesinde finhouse yaklaşımı." />
+  <meta name="keywords" content="yapay zeka halüsinasyon, AI hallucination sorumluluk, uydurma bilgi hukuki sorumluluk, AI Act Madde 50, KVKK otomatik karar, yerel LLM, egemen yapay zeka, RAG kaynak atıf, insan döngüde onay, açıklanabilir yapay zeka, finhouse" />
+  <link rel="canonical" href="https://finhouse.ai/blog-yapay-zeka-halusinasyon-sorumluluk.html" />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta property="og:title" content="Yapay Zekânın Uydurduğu Bilgilerden Kim Sorumlu?" />
+  <meta property="og:description" content="Yapay zeka halüsinasyonu artık hukuki bir zemine taşındı. Sorumluluk kime ait, düzenlenen sektörlerde risk neden büyür ve halüsinasyon tasarımdan nasıl azaltılır?" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://finhouse.ai/blog-yapay-zeka-halusinasyon-sorumluluk.html" />
+  <meta property="og:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg?v=2" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Yapay Zekânın Uydurduğu Bilgilerden Kim Sorumlu?" />
+  <meta name="twitter:description" content="Halüsinasyon artık hukuki bir mesele. Sorumluluk, düzenlenen sektörlerde risk ve halüsinasyonu tasarımdan azaltmanın yolları." />
+  <meta name="twitter:image" content="https://finhouse.ai/assets/og/finhouse-og.jpg?v=2" />
+  <link rel="stylesheet" href="./styles.css?v=20260707e" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"BlogPosting",
+        "headline":"Yapay Zekânın Uydurduğu Bilgilerden Kim Sorumlu?",
+        "description":"Yapay zeka halüsinasyonu artık yalnızca etik değil hukuki bir mesele haline geliyor. Sorumluluğun kime ait olduğu, düzenlenen sektörlerde artan risk ve halüsinasyonu tasarımdan azaltmanın yolları — KVKK ve AI Act çerçevesinde.",
+        "inLanguage":"tr",
+        "datePublished":"2026-07-08",
+        "dateModified":"2026-07-08",
+        "image":"https://finhouse.ai/assets/og/finhouse-og.jpg?v=2",
+        "author":{"@type":"Organization","name":"FinHouse.ai","url":"https://finhouse.ai/"},
+        "publisher":{"@type":"Organization","name":"FinHouse.ai","logo":{"@type":"ImageObject","url":"https://finhouse.ai/assets/og/finhouse-og.jpg?v=2"}},
+        "mainEntityOfPage":{"@type":"WebPage","@id":"https://finhouse.ai/blog-yapay-zeka-halusinasyon-sorumluluk.html"},
+        "keywords":"yapay zeka halüsinasyon, AI hallucination sorumluluk, AI Act Madde 50, KVKK otomatik karar, yerel LLM, RAG kaynak atıf, açıklanabilir yapay zeka"
+      },
+      {
+        "@type":"FAQPage",
+        "mainEntity":[
+          {"@type":"Question","name":"Yapay zeka halüsinasyonu nedir?","acceptedAnswer":{"@type":"Answer","text":"Halüsinasyon, bir dil modelinin gerçekte var olmayan ya da doğrulanamayan bir bilgiyi — bir tarih, bir rakam, bir mevzuat maddesi, bir alıntı — kendinden emin bir dille üretmesidir. Model 'yalan söylemez'; olasılıksal olarak akla yatkın gelen metni üretir ve bu metin doğru olmayabilir. Riskli olan, çıktının ikna edici ve akıcı görünmesidir."}},
+          {"@type":"Question","name":"Yapay zekânın uydurduğu bilgiden kurum sorumlu olabilir mi?","acceptedAnswer":{"@type":"Answer","text":"Genel eğilim, yapay zekâ çıktısını kullanan kurumun sorumluluğunun ortadan kalkmadığı yönündedir. Bir aracı olarak yapay zeka kullanmak, üretilen bilginin doğruluğunu kontrol etme ve nihai kararı verme yükümlülüğünü kurumdan almaz. Sorumluluk çoğu zaman sağlayıcı, uygulayıcı ve içeriği kullanan kurum arasında katmanlıdır; bu nedenle çıktının denetlenebilir ve gerekçelendirilebilir olması kritik önemdedir. (Bu genel bir değerlendirmedir, hukuki görüş değildir.)"}},
+          {"@type":"Question","name":"Halüsinasyon riski nasıl azaltılır?","acceptedAnswer":{"@type":"Answer","text":"Riski tamamen sıfırlamak mümkün değildir, ancak tasarımla belirgin biçimde azaltılabilir: yanıtları serbest üretim yerine kurumun kendi belgelerine ve mevzuata dayandırmak (RAG ve kaynak atıfı), dayanağı olmayan bilgiyi üretmeyi kısıtlamak, kritik kararları insan onayından geçirmek (human-in-the-loop) ve her çıktının hangi kaynağa dayandığını iz olarak tutmak. Yapay zeka ile üretilen içeriğin şeffaf biçimde işaretlenmesi de hesap verebilirliği güçlendirir."}},
+          {"@type":"Question","name":"Yerel (egemen) yapay zeka bu konuda ne sağlar?","acceptedAnswer":{"@type":"Answer","text":"Yerel/on-premise çalışan yapay zeka, verinin kurum dışına çıkmadan işlenmesini sağlayarak KVKK uyumunu kolaylaştırır ve modelin kurumun kendi verisiyle kalibre edilmesine imkân tanır. Bu, hem gizliliği korur hem de yanıtların kurumun gerçek belge ve süreçlerine dayandırılmasını — dolayısıyla halüsinasyonun azaltılmasını — mümkün kılar."}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+<header class="container">
+    <nav class="nav">
+      <a class="brand" href="./index.html" aria-label="FinHouse.ai">
+        <img id="brandLogo" class="brand-logo" src="./assets/logo-black.png.jpg" alt="FinHouse.ai" />
+        <span class="brand-text">finhouse.ai</span>
+      </a>
+
+      <div class="nav-links">
+        <a class="pill" href="./index.html#cozumler">Çözümler</a>
+        <a class="pill" href="./index.html#sektorler">Sektörler</a>
+        <a class="pill" href="./ai-marketplace.html">AI Marketplace</a>
+        <a class="pill" href="https://app.finhouse.ai" target="_blank" rel="noopener">FirmaAI</a>
+        <a class="pill" href="./blog.html">Blog</a>
+        <a class="pill primary" href="./demo.html">Demo</a>
+
+        <button id="themeToggle" class="pill" type="button" aria-label="Tema değiştir">
+          <span id="themeLabel">Koyu</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero2" style="margin-top: 18px;">
+      <div class="hero2-left">
+        <div class="kicker">Uyum &amp; AI Act • Sorumluluk</div>
+        <h1 style="margin-bottom: 10px;">Yapay zekânın uydurduğu bilgilerden kim sorumlu?</h1>
+        <p class="muted" style="max-width: 70ch;">8 Temmuz 2026 • FinHouse.ai Blog</p>
+        <p style="max-width: 80ch;">Yapay zekânın "uydurduğu" (halüsinasyon) bilgi, artık yalnızca teknik bir kusur ya da etik bir tartışma değil; giderek hukuki bir sorumluluk meselesine dönüşüyor. Peki bir yapay zeka hatalı bir bilgi ürettiğinde sorumluluk kime ait — ve kurumlar bu riski nasıl yönetmeli?</p>
+        <div class="cta-row" style="margin-top: 12px;">
+          <a class="pill" href="./blog.html">&larr; Blog</a>
+          <a class="pill primary" href="./demo.html">Demo talep et</a>
+        </div>
+      </div>
+      <div class="hero2-right" style="max-height: 240px; overflow: hidden;">
+        <img src="./assets/hero-finai.jpg" alt="Yapay zeka halüsinasyonu ve hukuki sorumluluk" style="width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;" />
+      </div>
+    </section>
+
+<section class="card" style="margin-top: 18px;">
+  <h2>Halüsinasyon nedir, neden artık hukuki bir mesele?</h2>
+  <p class="muted">
+    Yapay zeka halüsinasyonu, bir dil modelinin gerçekte var olmayan veya doğrulanamayan bir bilgiyi —
+    bir tarih, bir rakam, bir mevzuat maddesi, bir mahkeme kararı, bir alıntı — kendinden emin bir dille
+    üretmesidir. Model bilinçli olarak "yalan söylemez"; olasılıksal olarak akla yatkın gelen metni üretir
+    ve bu metin her zaman doğru olmaz. Asıl risk, çıktının ikna edici, akıcı ve yetkin görünmesidir.
+  </p>
+  <p class="muted">
+    Bu kusur uzun süre bir "kullanıcı deneyimi sorunu" olarak görüldü. Ancak yapay zeka çıktıları giderek
+    müşteriye giden yanıtlarda, resmi belgelerde ve karar süreçlerinde kullanıldıkça, hatalı bilginin
+    yarattığı zarar da somutlaştı. Nitekim 2026 ortasında, yapay zeka çıktılarındaki hatalı bilgiden doğan
+    sorumluluğa dair kamuoyuna yansıyan mahkeme tartışmaları — bunların arasında Münih'te bir arama motoru
+    sağlayıcısını ilgilendiren bir dosyanın gündeme gelmesi — sorunun artık yalnızca etik değil, hukuki bir
+    zemine taşındığını gösteren işaretler oldu. Tekil kararların ayrıntısı ne olursa olsun, yön açık:
+    "yapay zeka öyle söyledi" bir savunma değil.
+  </p>
+</section>
+
+<section class="card" style="margin-top: 18px;">
+  <h2>Sorumluluk kime ait?</h2>
+  <p class="muted">
+    Sorumluluk tek bir tarafa yıkılabilecek kadar basit değil; genellikle katmanlıdır. Uygulamada üç halka
+    öne çıkar:
+  </p>
+  <ul class="list">
+    <li><b>Modeli sağlayan</b>: Temel modeli geliştiren ve sunan taraf — modelin sınırları, uyarıları ve amaçlanan kullanımı bakımından.</li>
+    <li><b>Çözümü kuran / uygulayan</b>: Modeli bir iş sürecine yerleştiren, veriyle besleyen ve çıktıyı biçimlendiren taraf.</li>
+    <li><b>Çıktıyı kullanan kurum</b>: Üretilen bilgiyi müşteriye ileten, belgeye döken veya karara dayanak yapan taraf.</li>
+  </ul>
+  <p class="muted">
+    Genel eğilim, yapay zekâ kullanmanın kurumun kontrol ve özen yükümlülüğünü ortadan kaldırmadığı yönünde.
+    Yapay zeka bir aracı; hesap tablosu ya da danışman gibi. Aracı kullanmak, sonucun doğruluğunu denetleme
+    ve nihai kararı verme sorumluluğunu üstlenene bırakmaktan kurtarmaz. Bu yüzden asıl mesele "suçlu aramak"
+    değil, çıktının <b>denetlenebilir</b> ve <b>gerekçelendirilebilir</b> olmasıdır. <em>(Bu yazı genel bir
+    değerlendirmedir; belirli bir olaya ilişkin hukuki görüş yerine geçmez.)</em>
+  </p>
+</section>
+
+<section class="card" style="margin-top: 18px;">
+  <h2>Düzenlenen sektörlerde risk katlanır</h2>
+  <p class="muted">
+    Finans, bankacılık, hukuk ve sağlık gibi düzenlenen alanlarda halüsinasyonun bedeli çok daha ağırdır.
+    Yanlış bir tutar, uydurma bir mevzuat maddesi ya da temelsiz bir gerekçe; hem müşteriye zarar verir hem
+    de kurumu regülatif riske sokar.
+  </p>
+  <ul class="list">
+    <li><b>KVKK ve otomatik kararlar</b>: KVKK, ilgili kişiye tamamen otomatik işlenen kararlara itiraz ve bunları gerekçesiyle öğrenme hakkı tanır. Dayanağı gösterilemeyen bir yapay zeka kararı bu hakla çelişir.</li>
+    <li><b>AI Act ve şeffaflık</b>: Avrupa yapay zeka düzenlemesi, yapay zeka ile üretilen içeriğin kullanıcıya şeffaf biçimde bildirilmesini öngörür. Şeffaflık, hesap verebilirliğin ön koşuludur.</li>
+    <li><b>Sektörel beklentiler</b>: Düzenleyiciler, modelin ürettiği kararların açıklanabilir ve izlenebilir olmasını bekler; "kara kutu" bir çıktı denetimde savunulabilir değildir.</li>
+  </ul>
+</section>
+
+<section class="card" style="margin-top: 18px;">
+  <h2>finhouse yaklaşımı: halüsinasyonu tasarımdan azaltmak</h2>
+  <p class="muted">
+    Halüsinasyonu tümüyle sıfırlamak mümkün değil — ama doğru mimariyle riski belirgin biçimde düşürmek ve
+    her çıktıyı hesap verebilir kılmak mümkün. finhouse'un kurumsal yapay zeka platformu FirmaAI, bu ilkeler
+    üzerine kuruludur:
+  </p>
+  <ul class="list">
+    <li><b>Yerel / egemen yapay zeka</b>: Model kurumun kendi altyapısında (on-premise) çalışabilir; veri kurumdan çıkmaz. Bu hem KVKK uyumunu kolaylaştırır hem de modeli kurumun gerçek verisine kalibre eder.</li>
+    <li><b>Kaynak-temelli yanıt (RAG + atıf)</b>: Yanıtlar serbest üretim yerine kurumun kendi belgelerine ve mevzuata dayandırılır; dayanağı olmayan bilgi üretmek kısıtlanır ve cevabın kaynağı gösterilir.</li>
+    <li><b>İnsan-döngüde onay (HITL)</b>: Kritik aksiyonlar — bir mailin gönderilmesi, bir kararın uygulanması — otomatik gerçekleşmez; bir onay kuyruğundan geçer. Nihai karar her zaman insanda kalır.</li>
+    <li><b>AI Act Madde 50 şeffaflığı</b>: Yapay zeka ile üretilen içerik açıkça işaretlenir; örneğin üretilen belgelerde "Yapay zeka ile oluşturuldu" ibaresi yer alır.</li>
+    <li><b>Denetlenebilirlik ve iz</b>: Her yanıtın hangi kaynağa dayandığı kayıt altına alınır; kararın gerekçesi sonradan gösterilebilir. Açıklanabilirlik, tasarımın bir parçasıdır.</li>
+  </ul>
+  <p class="muted">
+    Kısacası soru "yapay zeka hata yapar mı?" değil — yapar. Doğru soru şu: kurum bu hatayı <b>fark edecek,
+    sınırlayacak ve hesabını verebilecek</b> bir mimariye sahip mi? finhouse'un cevabı, zekâyı hızdan değil,
+    <b>güvenden ve denetlenebilirlikten</b> yana kurmaktır.
+  </p>
+</section>
+
+    <section class="card" style="margin-top: 18px;">
+      <h2>Kurumunuz için güvenli yapay zeka</h2>
+      <p class="muted">Verisi kurumdan çıkmayan, yanıtını kaynağa dayandıran ve kararı insana bırakan bir yapay zeka altyapısını konuşalım.</p>
+      <div class="cta-row" style="margin-top: 12px;">
+        <a class="pill primary" href="./demo.html">Demo talep et</a>
+        <a class="pill" href="mailto:info@finhouse.ai">İletişim</a>
+      </div>
+    </section>
+  </main>
+
+<footer class="footer container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">FinHouse.ai</div>
+        <div class="muted">Finansal Yapay Zeka Çözümleri Evi</div>
+      </div>
+      <div>
+        <div class="footer-title">Sayfalar</div>
+        <a class="footer-link" href="./index.html#cozumler">Çözümler</a>
+        <a class="footer-link" href="./index.html#sektorler">Sektörler</a>
+        <a class="footer-link" href="./ai-marketplace.html">AI Marketplace</a>
+        <a class="footer-link" href="./blog.html">Blog</a>
+        <a class="footer-link" href="./demo.html">Demo</a>
+      </div>
+      <div>
+        <div class="footer-title">İletişim</div>
+        <a class="footer-link" href="mailto:info@finhouse.ai">info@finhouse.ai</a>
+      </div>
+    </div>
+    <div class="muted" style="margin-top: 14px;">&copy; 2026 FinHouse.ai</div>
+  </footer>
+  <script src="./app.js?v=20260707e"></script>
+  <script src="/fa.js" defer></script>
+</body>
+</html>
