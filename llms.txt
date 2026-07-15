@@ -1,13 +1,14 @@
 # FinHouse.ai
 
-> FinHouse.ai, İstanbul merkezli "Finansal Yapay Zeka Çözümleri Evi"dir. Bankalar, ödeme
-> kuruluşları ve sigorta şirketleri için KVKK uyumlu yapay zeka çözümleri geliştirir ve
+> FinHouse.ai, kurumlar için birden fazla yapay zekâ uygulaması geliştiren bir AI portalıdır;
+> en güçlü olduğu alan finanstır (bankacılık, ödeme kuruluşları, sigorta). KVKK uyumlu yapay zeka çözümleri geliştirir ve
 > entegre eder. Ayırt edici yaklaşımı veri egemenliğidir: kişisel veri içeren yapay zeka
 > sorguları kurumun kendi altyapısındaki yerel büyük dil modelinde işlenir, buluta giden
 > içerik maskelenir ve her adım denetlenebilir şekilde kayıt altına alınır.
 
-FinHouse.ai üç ürün geliştirir: FirmaAI (kurumsal AI platformu), AIWATCH (AI görünürlük
-platformu) ve FirmaCom (şirket kuruluşu ve hizmet platformu). Ürünlerin yanında doküman
+FinHouse.ai dört ürün geliştirir: FirmaAI (kurumsal AI platformu), AIWATCH (AI görünürlük
+platformu), FirmaCom (şirket kuruluşu ve hizmet platformu) ve AIGüven (kurumsal risk & uyum /
+GRC — yakında). Ürünlerin yanında doküman
 zekâsı (IDP), agentic iş akışları, Voice AI, süreç analitiği, AI test/doğruluk ve
 uyum/denetim alanlarında çözüm entegrasyonu yapar. Çalışma modeli: pilot ile başlar,
 ölçülebilir KPI'larla değeri kanıtlar, sonra yaygınlaştırır.
@@ -30,6 +31,10 @@ uyum/denetim alanlarında çözüm entegrasyonu yapar. Çalışma modeli: pilot 
   kuruluş belge setini üretir ve yolculuğu adım adım takip eder; kurulu şirketlere banka
   hesabı, POS, e-imza/KEP, sigorta gibi hizmetlerde alternatif karşılaştırma ve başvuru
   takibi sunar. Belgeler tek kasada durur. Müşteriye ücretsizdir. İletişim: info@finhouse.ai
+- [AIGüven](https://finhouse.ai/aiguven.html) (yakında): Yapay zekâ destekli kurumsal risk &
+  uyum (GRC) yönetim uygulaması. KVKK, BDDK, SPK, MASAK ve ISO 27001 çerçevesinde mevzuat radarı,
+  kontrol otomasyonu ve denetime hazır kanıt üretimi. Yerel modelde, insan onaylı. Erken erişime
+  açık. Ürün sitesi: aiguven.com.tr
 
 ## Çözümler
 
@@ -98,7 +103,7 @@ Hazır ürünlerin yanında kuruma özel danışmanlık ve geliştirme hizmeti v
 ## Sık sorulanlar
 
 - FinHouse.ai ne yapar? Finans sektörüne özel yapay zeka çözümleri geliştirir ve entegre
-  eder; üç ürünü (FirmaAI, AIWATCH, FirmaCom) ve altı çözüm alanı vardır.
+  eder; dört ürünü (FirmaAI, AIWATCH, FirmaCom, AIGüven) ve çözüm alanları vardır.
 - Veriler nerede işlenir? Kişisel veri içeren sorgular kurumun kendi altyapısındaki yerel
   modelde işlenir; buluta giden içerik maskelenir. KVKK uyumu tasarım gereğidir.
 - GEO nedir? Generative Engine Optimization — markanın AI motorlarının (ChatGPT, Gemini
